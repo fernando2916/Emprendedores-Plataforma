@@ -19,29 +19,29 @@
     id="dropdownDelay">
     <div class="p-1 space-y-0.5">
       <a 
-        class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg  dark:text-white hover:bg-light-200 focus:outline-hidden focus:bg-gray-100 text-slate-200 dark:hover:bg-nav-700" 
+        class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm dark:text-white hover:bg-light-200 focus:outline-hidden focus:bg-gray-100 text-slate-200 dark:hover:bg-nav-700" 
         wire:navigate 
         href="{{ route('home')}}"
         >
         <i class="fa-solid fa-pen"></i>
         Diseño Gráfico
       </a>
-      <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg  dark:text-white hover:bg-light-200 focus:outline-hidden focus:bg-gray-100 text-slate-200 dark:hover:bg-nav-700" 
+      <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm dark:text-white hover:bg-light-200 focus:outline-hidden focus:bg-gray-100 text-slate-200 dark:hover:bg-nav-700" 
       wire:navigate href="{{ route('home') }}">
         <i class="fa-solid fa-camera"></i>
         Fotografía
       </a>
-      <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg  dark:text-white hover:bg-light-200 focus:outline-hidden focus:bg-gray-100 text-slate-200 dark:hover:bg-nav-700" 
+      <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm dark:text-white hover:bg-light-200 focus:outline-hidden focus:bg-gray-100 text-slate-200 dark:hover:bg-nav-700" 
       wire:navigate href="{{ route('home') }}">
         <i class="fa-solid fa-laptop-code"></i>
         Diseño y Desarrollo Web
       </a>
-      <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg  dark:text-white hover:bg-light-200 focus:outline-hidden focus:bg-gray-100 text-slate-200 dark:hover:bg-nav-700" 
+      <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm dark:text-white hover:bg-light-200 focus:outline-hidden focus:bg-gray-100 text-slate-200 dark:hover:bg-nav-700" 
       wire:navigate href="{{ route('home') }}">
         <i class="fa-solid fa-print"></i>
         Impresión
       </a>
-      <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg  dark:text-white hover:bg-light-200 focus:outline-hidden focus:bg-gray-100 text-slate-200 dark:hover:bg-nav-700" 
+      <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm dark:text-white hover:bg-light-200 focus:outline-hidden focus:bg-gray-100 text-slate-200 dark:hover:bg-nav-700" 
       wire:navigate href="{{ route('home') }}">
         <i class="fa-solid fa-chalkboard-user"></i>
         Asesorias
