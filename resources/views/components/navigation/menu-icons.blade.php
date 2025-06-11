@@ -3,7 +3,7 @@
   <x-navigation.cart/>
   <x-navigation.notification/>
   <button id="dropdownDelayButton" data-dropdown-toggle="dropdownDelay3" data-dropdown-delay="500"
-    data-dropdown-trigger="hover" class="font-medium rounded-lg text-center inline-flex items-center gap-1 cursor-pointer"
+    data-dropdown-trigger="hover" class="font-medium rounded-lg text-center  items-center gap-1 cursor-pointer hidden md:flex"
     type="button">
       <i class="fa-solid fa-user"></i>
   </button>
