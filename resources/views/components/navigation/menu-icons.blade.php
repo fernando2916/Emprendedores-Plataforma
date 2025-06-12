@@ -28,7 +28,7 @@
       </div>
       <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg  dark:text-white hover:bg-light-200 focus:outline-hidden focus:bg-gray-100 text-slate-200 dark:hover:bg-nav-700" 
       wire:navigate 
-      {{-- href="{{ route('admin.index') }}" --}}
+      href="{{ route('dashboard') }}"
       >
           <i class="fa-solid fa-user-shield"></i>
          Panel administrativo
