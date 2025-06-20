@@ -40,10 +40,10 @@ Ingresar |
 
         <div class="flex justify-between items-center">
             <div class="flex items-center gap-2">
-                <input type="checkbox" name="remember" class="accent-btn-400">
-                <span class="text-sm text-slate-600 dark:text-white">Recuerdame</span>
+                <input type="checkbox" name="remember" class="text-btn-400 accent-btn-400 ring-offset-transparent border-none">
+                <span class="text-sm text-white">Recuerdame</span>
             </div>
-            <a href="{{ route('reset') }}" wire:navigate class="text-slate-600 dark:text-link-100">¿Olvidaste tu
+            <a href="{{ route('reset') }}" wire:navigate class="text-link-100">¿Olvidaste tu
                 contraseña?</a>
         </div>
         <button :disabled="cargando" type="submit"
@@ -58,9 +58,9 @@ Ingresar |
             </span>
         </button>
     </form>
-    <div class="space-x-1 rtl:space-x-reverse text-center text-zinc-600 dark:text-zinc-400 text-lg">
+    <div class="space-x-1 rtl:space-x-reverse text-center text-white text-lg">
         ¿No tienes una cuenta?
-        <a href="{{ route('register') }}" wire:navigate class="text-slate-600 dark:text-link-100 font-semibold">Crear
+        <a href="{{ route('register') }}" wire:navigate class="text-link-100 font-semibold">Crear
             Cuenta</a>
     </div>
 </div>

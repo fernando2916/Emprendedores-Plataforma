@@ -17,15 +17,16 @@
 
         --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
-        --font-display: 'Montserrat', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        --font-display: 'Montserrat', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
 
-        --color-selec-100: #812485;
 
         --color-fondo-100: #1f2632;
         --color-fondo-200: #000c1f;
 
+        --color-select-100: #812485;
+
         --color-cont-100: #00122e;
-        --color-cont-200: #5a7a9d;
+        --color-cont-200: #59799C;
 
     
         --color-nav-50: #eedbff;
@@ -66,15 +67,16 @@
     
         --color-categoria-100: #00ffdf;
         --color-categoria-200: #035863;
+        --color-categoria-300: #463173;
 
         --color-post-100: #b822d7;
         --color-post-200: #6c1877;
 }
 
 @layer utilities {
-    tr:nth-child(even) {
-      background: #1e0833;
-    }
+    /* tr:nth-child(even) {
+      background: #000e25;
+    } */
     body {
       touch-action: pan-y;
       overflow-x: hidden

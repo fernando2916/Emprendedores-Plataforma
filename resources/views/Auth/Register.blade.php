@@ -66,9 +66,9 @@ Crear Cuenta |
                     placeholder="********" />
             </div>
             <div 
-                class="w-full py-2 flex flex-wrap items-center gap-x-1 text-[16px] break-words">
+                class="w-full py-2 flex flex-wrap items-center justify-center gap-x-1 text-[13px] break-words">
                 <p class="leading-snug">
-                    Al registrar tu cuenta, indicas que leíste y aceptas los
+                    Al registrarte, aceptas los
                     <x-ui.modales.terminos-modal />
 
                     y el
@@ -90,10 +90,10 @@ Crear Cuenta |
         </form>
 
     </div>
-    <div class="space-x-1 rtl:space-x-reverse text-center text-zinc-600 dark:text-zinc-400 text-lg">
+    <div class="space-x-1 rtl:space-x-reverse text-center  text-lg">
         ¿Ya tienes una cuenta?
         <a href="{{ route('login') }}" wire:navigate
-            class="text-slate-600 dark:text-link-100 font-semibold">Ingresar</a>
+            class="text-link-100 font-semibold">Ingresar</a>
     </div>
 </div>
 @endsection

@@ -11,7 +11,7 @@
   @livewireStyles
  
 </head>
-<body class="bg-fondo-100 dark:bg-fondo-200 font-display text-white selection:bg-selec-100 selection:text-white">
+<body class="bg-fondo-100 dark:bg-fondo-200 font-display text-white selection:bg-select-100 selection:text-white">
   <x-navigation.header/>
   <main class="pt-[70px]">
     @yield('contenido')

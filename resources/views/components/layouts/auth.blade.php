@@ -10,7 +10,7 @@
         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         @livewireStyles
     </head>
-    <body class="min-h-screen bg-fondo-100 dark:bg-fondo-200 text-white selection:bg-selec-100 selection:text-white font-display">
+    <body class="min-h-screen bg-fondo-100 dark:bg-fondo-200 text-white selection:bg-select-100 selection:text-white font-display">
         <nav class="bg-light-200 dark:bg-nav-900 text-slate-800 dark:text-white p-5 fixed w-full">
             <div class="flex justify-between items-center">
                 <a wire:navigate href="{{ route('home') }}" class="flex items-center justify-center">
@@ -21,11 +21,9 @@
         </nav>
         <div class="flex min-h-svh flex-col items-center gap-6 p-2 md:p-10 ">
             <div class="flex w-full max-w-md flex-col gap-6">               
-                <div class="flex flex-col gap-6">
                     <div class="rounded-xl bg-light-200 mt-[7rem] dark:bg-cont-100 shadow-xs mx-2 sm:mx-0">
                         <div class="px-7 md:px-10 py-8">@yield('contenido')</div>
                     </div>
-                </div>
             </div>
         </div>
     @livewireScripts
