@@ -14,20 +14,37 @@ class PermissionSeeder extends Seeder
     public function run(): void
     {
         $permissions = [
-            "Admin.view",
-            "Admin.create",
-            "Admin.edit",
-            "Admin.delete",
+            "Ver panel",
+           
+            "usuarios index",
+            "usuarios create",
+            "usuarios edit",
+            "usuarios delete",
             
-            "Editor.view",
-            "Editor.create",
-            "Editor.edit",
-            "Editor.delete",
+            "roles index",
+            "roles create",
+            "roles edit",
+            "roles delete",
             
-            "Instructor.view",
-            "Instructor.create",
-            "Instructor.edit",
-            "Instructor.delete",
+            "permisos index",
+            "permisos create",
+            "permisos edit",
+            "permisos delete",
+            
+            "categoria post index",
+            "categoria post create",
+            "categoria post edit",
+            "categoria post delete",
+            
+            "categoria curso index",
+            "categoria curso create",
+            "categoria curso edit",
+            "categoria curso delete",
+            
+            "categoria producto index",
+            "categoria producto create",
+            "categoria producto edit",
+            "categoria producto delete",
         ];
 
         foreach ($permissions as $key => $value) {

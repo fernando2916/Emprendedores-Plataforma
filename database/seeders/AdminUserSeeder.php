@@ -15,7 +15,7 @@ class AdminUserSeeder extends Seeder
      */
     public function run(): void
     {
-         User::create([
+         $user = User::create([
             'nombre_completo' => 'Fernando Flores',
             'username' => 'fer-2916',
             'email' => 'admin@example.com',
@@ -23,5 +23,7 @@ class AdminUserSeeder extends Seeder
             'is_verified' => 'Verificado', // Marcar como verificado
             'verification_id' => Str::uuid(),
         ]);
+
+        $user->assignRole('Super Admin');
     }
 }
