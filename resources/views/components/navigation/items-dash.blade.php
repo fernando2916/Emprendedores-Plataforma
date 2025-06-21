@@ -7,29 +7,38 @@
         <span class="ms-3">Inicio</span>
       </a>
     </li>
+    @can('usuarios index')
+      
     <li>
-      <a wire:navigate href="{{ route('users.index') }}"
-        class="flex items-center p-2 rounded-lg dark:text-white hover:bg-light-200 dark:hover:bg-nav-700 group">
-        <i class="fa-solid fa-users"></i>
-        <span class="ms-3">Usuarios</span>
-      </a>
-    </li>
-    <li>
-      <a href="{{ route('admin.roles.index') }}" wire:navigate class="flex items-center p-2 rounded-lg dark:text-white hover:bg-light-200 dark:hover:bg-nav-700 group">
-        <i class="fa-solid fa-user-gear"></i>
-        <span class="ms-3">
-          Roles
-        </span>
-      </a>
-    </li>
-    <li>
-      <a href="{{ route('admin.permissions.index') }}" wire:navigate class="flex items-center p-2 rounded-lg dark:text-white hover:bg-light-200 dark:hover:bg-nav-700 group">
-        <i class="fa-solid fa-user-shield"></i>
-        <span class="ms-3">
-          Permisos
-        </span>
-      </a>
-    </li>
+      <a wire:navigate href="{{ route('admin.users.index') }}"
+      class="flex items-center p-2 rounded-lg dark:text-white hover:bg-light-200 dark:hover:bg-nav-700 group">
+      <i class="fa-solid fa-users"></i>
+      <span class="ms-3">Usuarios</span>
+    </a>
+  </li>
+  @endcan
+  @can('roles index')
+    
+  <li>
+    <a href="{{ route('admin.roles.index') }}" wire:navigate class="flex items-center p-2 rounded-lg dark:text-white hover:bg-light-200 dark:hover:bg-nav-700 group">
+      <i class="fa-solid fa-user-gear"></i>
+      <span class="ms-3">
+        Roles
+      </span>
+    </a>
+  </li>
+  @endcan
+  @can('permisos index')
+    
+  <li>
+    <a href="{{ route('admin.permissions.index') }}" wire:navigate class="flex items-center p-2 rounded-lg dark:text-white hover:bg-light-200 dark:hover:bg-nav-700 group">
+      <i class="fa-solid fa-user-shield"></i>
+      <span class="ms-3">
+        Permisos
+      </span>
+    </a>
+  </li>
+  @endcan
     <li>
       <button type="button"
         class="flex items-center w-full p-2 text-base transition duration-75 rounded-lg group hover:bg-light-300 dark:hover:bg-nav-700"

@@ -5,14 +5,17 @@
       Inicio
     </a>
   </li>
+  @can('Ver panel')
+    
   <li class="hover:bg-slate-400 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all" @click="showMenu = false">
     <a wire:navigate 
     href="{{ route('dashboard') }}" 
     class="flex items-center gap-3 p-3 text-lg">
-      <i class="fa-solid fa-user-shield"></i>
-      Panel Administrativo
-    </a>
-  </li>
+    <i class="fa-solid fa-user-shield"></i>
+    Panel Administrativo
+  </a>
+</li>
+@endcan
   <li @click="showMenu = false" class="hover:bg-slate-400 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all">
     <a wire:navigate 
     {{-- href="{{ route("blog.index") }}"  --}}

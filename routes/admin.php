@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
 
-Route::get('/usuarios', [UsersController::class, 'index'])->name('users.index');
+Route::resource('/users', UsersController::class)->names('admin.users');
 
 Route::resource('/roles', RoleController::class)->names('admin.roles');
 Route::resource('/permissions', PermisionController::class)->names('admin.permissions');

@@ -34,7 +34,7 @@ class PermisionController extends Controller
             'name' => 'required|unique:permissions,name|string'
         ]);
 
-        $permission = Permission::create([
+        Permission::create([
             'name' => $request->name,
         ]);
 
@@ -45,7 +45,7 @@ class PermisionController extends Controller
             'color' => '#ffffff',
         ]);
 
-        return redirect()->route('admin.permissions.edit', $permission);
+        return redirect()->route('admin.permissions.index');
 
     }
 

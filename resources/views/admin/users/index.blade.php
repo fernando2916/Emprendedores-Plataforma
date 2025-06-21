@@ -5,13 +5,16 @@
   <p class="text-xl font-semibold">
     Usuarios
   </p>
-  <a href="">
+  @can('usuarios create')
+
+  <a href="{{ route('admin.users.create') }}" wire:navigate>
     <button
-      class="bg-btn-200 hover:bg-btn-400 dark:bg-btn-400 text-white dark:hover:bg-btn-600 duration-300 transition-colors rounded-md px-3 py-2">
+      class="bg-btn-200 hover:bg-btn-400 dark:bg-btn-400 text-white dark:hover:bg-btn-600 duration-300 transition-colors rounded-md px-3 py-2 cursor-pointer">
       <i class="fa-solid fa-plus"></i>
       Crear Usuario
     </button>
   </a>
+  @endcan
 </div>
 
 <section class="pt-3">
@@ -24,7 +27,7 @@
             <label for="simple-search" class="sr-only">Search</label>
             <div class="relative w-full">
               <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-               <i class="fa-solid fa-magnifying-glass"></i>
+                <i class="fa-solid fa-magnifying-glass"></i>
               </div>
               <input type="text" id="simple-search"
                 class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 w-full pl-10 p-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500"
@@ -33,7 +36,7 @@
           </form>
         </div>
         <div
-          class="md:w-auto flex flex-col md:flex-row md:space-y-0 items-stretch md:items-center justify-end md:space-x-3 flex-shrink-0">          
+          class="md:w-auto flex flex-col md:flex-row md:space-y-0 items-stretch md:items-center justify-end md:space-x-3 flex-shrink-0">
           <div class="flex items-center w-full md:w-auto">
             <button id="filterDropdownButton" data-dropdown-toggle="filterDropdown"
               class="w-full md:w-auto flex items-center justify-center px-3 py-2  text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-primary-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
@@ -94,6 +97,7 @@
             <tr>
               <th scope="col" class="px-4 py-3">Id</th>
               <th scope="col" class="px-4 py-3">Nombre Completo</th>
+              <th scope="col" class="px-4 py-3">Rol</th>
               <th scope="col" class="px-4 py-3">Correo</th>
               <th scope="col" class="px-4 py-3">Nombre de usuario</th>
               <th scope="col" class="px-4 py-3">Verificado</th>
@@ -104,38 +108,69 @@
           <tbody>
             @foreach ($users as $user )
             <tr class="border-b dark:border-gray-700">
-              <th scope="row" class="px-4 py-3 font-medium text-gray-900 whitespace-nowrap dark:text-white">{{ $user->id
+              <th scope="row" class="px-4 py-3 font-medium whitespace-nowrap dark:text-white">{{ $user->id
                 }}</th>
               <td class="px-4 py-3">{{ $user->nombre_completo }}</td>
+              {{-- <td class="px-4 py-3">{{ $user->roles->pluck('name') }}</td> --}}
+              <td class="px-4 py-3">
+                @foreach ($user->roles as $role)
+                @php
+                // Asignar color según el nombre del rol
+                $color = match($role->name) {
+                'Admin' => 'bg-red-600 text-white',
+                'Editor' => 'bg-blue-600 text-white',
+                'Auditor' => 'bg-yellow-400 text-black',
+                'Usuario' => 'bg-gray-400 text-white',
+                default => 'bg-purple-500 text-white',
+                };
+                @endphp
+
+                <span class="px-2 py-1 rounded text-xs font-semibold {{ $color }}">
+                  {{ $role->name }}
+                </span>
+                @endforeach
+              </td>
               <td class="px-4 py-3">{{ $user->email }}</td>
               <td class="px-4 py-3">{{ $user->username }}</td>
               <td class="px-4 py-3">
                 <span class="bg-">
-                  @if ($user->is_verified === 'Pendiente') 
-                    <span class="border-transparent bg-red-700 text-white capitalize inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0">
-                      {{ $user->is_verified}}
-                    </span>
-                    @else
-                    <span class="border-transparent bg-green-700 text-white capitalize inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0">
-                      {{ $user->is_verified}}
-                    </span>
+                  @if ($user->is_verified === 'Pendiente')
+                  <span
+                    class="border-transparent bg-red-700 text-white capitalize inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0">
+                    {{ $user->is_verified}}
+                  </span>
+                  @else
+                  <span
+                    class="border-transparent bg-green-700 text-white capitalize inline-flex items-center justify-center rounded-md border px-2 py-0.5 text-xs font-medium w-fit whitespace-nowrap shrink-0">
+                    {{ $user->is_verified}}
+                  </span>
 
-                    @endif
+                  @endif
                 </span>
               </td>
-              <td class="px-4 py-3">{{ $user->created_at}}</td>
+              <td class="px-4 py-3">{{ $user->created_at->format('d-m-Y')}}</td>
               <td class="px-4 py-3 flex items-center justify-end">
                 <div class="flex items-center gap-2">
-                  <a href="{{ route('home') }}">
-                    <button class="px-3 py-2 bg-btn-200 hover:bg-btn-400 dark:bg-btn-400 dark:hover:bg-btn-600 transition-colors duration-150 rounded-md">
+                  @can('usuarios edit')
+
+                  <a href="{{ route('admin.users.edit', $user) }}">
+                    <button
+                      class="px-3 py-2 bg-btn-200 hover:bg-btn-400 dark:bg-btn-400 dark:hover:bg-btn-600 transition-colors duration-150 rounded-md cursor-pointer">
                       <i class="fa-solid fa-pen-to-square"></i>
                     </button>
                   </a>
-                  <a href="">
-                    <button class="px-3 py-2 bg-btn-200 hover:bg-btn-400 dark:bg-btn-400 dark:hover:bg-btn-600 transition-colors duration-150 rounded-md">
+                  @endcan
+                  @can('usuarios delete')
+
+                  <form action="{{ route('admin.users.destroy', $user) }}" class="delete-form" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <button
+                      class="px-3 py-2 bg-btn-200 hover:bg-btn-400 dark:bg-btn-400 dark:hover:bg-btn-600 transition-colors duration-150 rounded-md cursor-pointer">
                       <i class="fa-solid fa-trash"></i>
                     </button>
-                  </a>
+                  </form>
+                  @endcan
                 </div>
               </td>
             </tr>
@@ -203,3 +238,29 @@
 </section>
 
 @endsection
+
+@push('scripts')
+<script>
+  document.querySelectorAll('.delete-form').forEach(form => {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        Swal.fire({
+                  title: "¿Estás seguro?",
+                  text: "¡No podrás revertir esto!",
+                  icon: "warning",
+                  showCancelButton: true,
+                  confirmButtonColor: "#3085d6",
+                  cancelButtonColor: "#d33",
+                  confirmButtonText: "Sí, eliminar",
+                  cancelButtonText: "Cancelar",
+                  background: "#120024",
+                  color: "#ffffff",
+                }).then((result) => {
+                  if(result.isConfirmed) {
+                    form.submit();
+                  }
+                })
+      })
+    })
+</script>
+@endpush

@@ -52,6 +52,9 @@
                 <p class="text-sm font-medium truncate text-link-100" role="none">
                   {{ auth()->user()->email }}
                 </p>
+                <p class="">
+                  {{ auth()->user()->roles->pluck('name')->join(', ')  }}
+                </p>
               </div>
               <ul class="py-1" role="none">
                 <li>

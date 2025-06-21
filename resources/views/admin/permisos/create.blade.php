@@ -18,7 +18,7 @@
                     <label for="name"
                         class="text-sm font-medium mb-2 after:ml-0.5 after:text-red-500 after:content-['*']">Nombre del
                         Permiso</label>
-                    <input id="name" name="name" value="{{ old('name') }}" type="text" placeholder="Editar post" class="disabled:bg-nav-900 disabled:border-nav-900 border-link-100 focus:shadow-link-200 w-full rounded-md border-2 bg-transparent p-2 outline-none focus:shadow-md placeholder:text-slate-900 dark:placeholder:text-slate-400 mt-2 @error('name')
+                    <input id="name" name="name" value="{{ old('name') }}" type="text" placeholder="Ver panel" class="disabled:bg-nav-900 disabled:border-nav-900 border-link-100 focus:shadow-link-200 w-full rounded-md border-2 bg-transparent p-2 outline-none focus:shadow-md placeholder:text-slate-900 dark:placeholder:text-slate-400 mt-2 @error('name')
           dark:border-alerts-500
           @enderror">
                     @error('name')
