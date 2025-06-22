@@ -5,13 +5,16 @@
   <p class="text-xl font-semibold">
     Categorias Post
   </p>
+  @can('categoria post create')
+    
   <a wire:navigate href="{{ route('admin.categories.create') }}">
     <button
-      class="bg-btn-200 hover:bg-btn-400 dark:bg-btn-400 text-white dark:hover:bg-btn-600 duration-300 transition-colors rounded-md px-3 py-2 cursor-pointer">
-      <i class="fa-solid fa-pen"></i>
-      Crear categoria
-    </button>
-  </a>
+    class="bg-btn-200 hover:bg-btn-400 dark:bg-btn-400 text-white dark:hover:bg-btn-600 duration-300 transition-colors rounded-md px-3 py-2 cursor-pointer">
+    <i class="fa-solid fa-pen"></i>
+    Crear categoria
+  </button>
+</a>
+@endcan
 </div>
 
 <section class="pt-3">
@@ -35,11 +38,16 @@
               <td class="px-4 py-3">{{ $category->nombre }}</td>              
               <td class="px-4 py-3 flex items-center justify-start">
                 <div class="flex items-center gap-2">
+                  @can('categoria post edit')
+                    
                   <a href="{{ route('admin.categories.edit', $category) }}" wire:navigate>
                     <button class="px-3 py-2 bg-btn-200 hover:bg-btn-400 dark:bg-btn-400 dark:hover:bg-btn-600 transition-colors duration-150 rounded-md cursor-pointer">
                       <i class="fa-solid fa-pen-to-square"></i>
                     </button>
                   </a>
+                  @endcan
+                  @can('categoria post delete')
+                    
                   <form class="delete-form" action="{{ route('admin.categories.destroy', $category) }}" method="POST">
                     @csrf
                     @method('DELETE')
@@ -47,6 +55,7 @@
                       <i class="fa-solid fa-trash"></i>
                     </button>
                   </form>
+                  @endcan
                 </div>
               </td>
             </tr>

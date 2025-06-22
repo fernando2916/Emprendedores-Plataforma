@@ -52,13 +52,15 @@
           Publicaciones
         </a>
       </li>
+      @can('categoria post index')        
       <li>
         <a href="{{ route('admin.categories.index') }}" wire:navigate
-          class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-4 gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
-          <i class="fa-solid fa-tag"></i>
-          Categorias Post
-        </a>
-      </li>
+        class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-4 gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
+        <i class="fa-solid fa-tag"></i>
+        Categorias Post
+      </a>
+    </li>
+    @endcan
       <li>
         <a href="#"
           class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-4 gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
