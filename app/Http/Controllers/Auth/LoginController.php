@@ -20,6 +20,9 @@ class LoginController extends Controller
         $request->validate([
             'email' => 'required|email',
             'password' => 'required',
+        ], [
+            'email.required' => 'El correo es obligatorio.',
+            'password.required' => 'La contraseña es obligatoria.',
         ]);
 
         if(!Auth::attempt($request->only('email', 'password'), $request->remember)) {

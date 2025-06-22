@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Mail\ConfirmPassword;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
@@ -19,10 +20,13 @@ class ResetPasswordController extends Controller
         // Validate the request data
         $request->validate([
             'email' => 'required|email|exists:users,email',
+        ], [
+            'email.required' => 'El correo es obligatorio',
+            'email.exists' => 'El correo no esta registrado',
         ]);
 
         // Find the user by email
-        $user = \App\Models\User::where('email', $request->email)->first();
+        $user = User::where('email', $request->email)->first();
 
         Mail::to($user->email)->send(new ConfirmPassword($user));
 

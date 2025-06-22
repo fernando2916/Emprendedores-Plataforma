@@ -14,7 +14,9 @@ Restablecer Contraseña |
     <div class="">
       <label for="email" class="text-sm font-medium mb-2 after:ml-0.5 after:text-red-500 after:content-['*']">Correo
         Electrónico</label>
-      <input id="email" name="email" value="{{ old('email') }}" type="email" placeholder="example@correo.com" class="disabled:bg-nav-900 disabled:border-nav-900 border-link-100 focus:shadow-link-200 w-full rounded-md border-2 bg-transparent p-2 outline-none focus:shadow-md placeholder:text-slate-900 dark:placeholder:text-slate-400 mt-2">
+      <input id="email" name="email" value="{{ old('email') }}" type="email" placeholder="example@correo.com" class="disabled:bg-nav-900 disabled:border-nav-900 border-link-100 focus:shadow-link-200 w-full rounded-md border-2 bg-transparent p-2 outline-none focus:shadow-md placeholder:text-slate-900 dark:placeholder:text-slate-400 mt-2 @error('email')
+          dark:border-alerts-500
+          @enderror">
       @error('email')
 
       <p class="text-sm font-semibold text-alerts-500">{{ $message }}</p>
