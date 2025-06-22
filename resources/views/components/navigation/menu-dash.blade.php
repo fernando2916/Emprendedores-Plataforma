@@ -5,7 +5,7 @@
       Inicio
     </a>
   </li>
-  @can('Ver panel')
+  @can('ver panel')
     
   <li class="hover:bg-slate-400 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all" @click="showMenu = false">
     <a wire:navigate 

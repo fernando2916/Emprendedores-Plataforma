@@ -12,7 +12,7 @@ class DashboardController extends Controller implements HasMiddleware
     public static function middleware(): array
     {
         return [
-            new Middleware('can:Ver panel')
+            new Middleware('can:ver panel')
         ];
     }
     

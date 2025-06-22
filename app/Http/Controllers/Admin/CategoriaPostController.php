@@ -13,8 +13,8 @@ class CategoriaPostController extends Controller
      */
     public function index()
     {
-        $categorias = CategoriaPost::all();
-        return view('admin.post.categorias.index', compact('categorias'));
+        $categories = CategoriaPost::orderBy('id', 'asc')->paginate(10);
+        return view('admin.post.categorias.index', compact('categories'));
     }
 
     /**
@@ -30,7 +30,26 @@ class CategoriaPostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'nombre' => 'required|max:50|unique:categoria_posts'
+        ], [
+            'nombre.required' => 'El nombre de la categoria es obligatorio.',
+            'nombre.unique' => 'El nombre de la categoria ya existe.'
+        ]);
+
+        $category = CategoriaPost::create([
+            'nombre' => $request->nombre
+        ]);
+
+        // mensaje flash
+        session()->flash('swal', [
+            'icon' => 'success',
+            'title' => 'Categoria creada correctamente',
+            'background' => '#120024',
+            'color' => '#ffffff',
+        ]);
+
+        return redirect()->route('admin.categories.edit', $category);
     }
 
     /**
@@ -44,24 +63,51 @@ class CategoriaPostController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(CategoriaPost $categoriaPost)
+    public function edit(CategoriaPost $category)
     {
-        return view('admin.post.categorias.edit');
+        return view('admin.post.categorias.edit', compact('category'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request,CategoriaPost $categoriaPost)
+    public function update(Request $request,CategoriaPost $category)
     {
-        //
+        $request->validate([
+            'nombre' => 'required|max:50|unique:categoria_posts' 
+        ], [
+            'nombre.required' => 'El nombre de la categoria es obligatorio.',
+            'nombre.unique' => 'El nombre de la categoria ya existe.'
+        ]);
+
+        $category->update([
+            'nombre' => $request->nombre
+        ]);
+
+        session()->flash('swal', [
+            'icon' => 'success',
+            'title' => 'Categoria post actualizada correctamente',
+            'background' => '#120024',
+            'color' => '#ffffff',
+        ]);
+
+        return redirect()->route('admin.categories.index');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(CategoriaPost $categoriaPost)
+    public function destroy(CategoriaPost $category)
     {
-        //
+        $category->delete();
+
+        session()->flash('swal', [
+            'icon' => 'success',
+            'title' => 'Categoria post eliminada correctamente',
+            'background' => '#120024',
+            'color' => '#ffffff',
+        ]);
+
+        return redirect()->route('admin.categories.index');
     }
 }

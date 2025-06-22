@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('categoria_posts', function (Blueprint $table) {
             $table->id();
-            $table->string('nomnbre');
+            $table->string('nombre')->unique();
             $table->timestamps();
         });
     }

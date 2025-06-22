@@ -8,66 +8,66 @@
       </a>
     </li>
     @can('usuarios index')
-      
+
     <li>
       <a wire:navigate href="{{ route('admin.users.index') }}"
-      class="flex items-center p-2 rounded-lg dark:text-white hover:bg-light-200 dark:hover:bg-nav-700 group">
-      <i class="fa-solid fa-users"></i>
-      <span class="ms-3">Usuarios</span>
-    </a>
-  </li>
-  @endcan
-  @can('roles index')
-    
-  <li>
-    <a href="{{ route('admin.roles.index') }}" wire:navigate class="flex items-center p-2 rounded-lg dark:text-white hover:bg-light-200 dark:hover:bg-nav-700 group">
-      <i class="fa-solid fa-user-gear"></i>
-      <span class="ms-3">
-        Roles
-      </span>
-    </a>
-  </li>
-  @endcan
-  @can('permisos index')
-    
-  <li>
-    <a href="{{ route('admin.permissions.index') }}" wire:navigate class="flex items-center p-2 rounded-lg dark:text-white hover:bg-light-200 dark:hover:bg-nav-700 group">
-      <i class="fa-solid fa-user-shield"></i>
-      <span class="ms-3">
-        Permisos
-      </span>
-    </a>
-  </li>
-  @endcan
-    <li>
-      <button type="button"
-        class="flex items-center w-full p-2 text-base transition duration-75 rounded-lg group hover:bg-light-300 dark:hover:bg-nav-700"
-        aria-controls="dropdown-categorias" data-collapse-toggle="dropdown-categorias">
-        <i class="fa-solid fa-book"></i>
-        <span class="flex-1 ms-3 text-left whitespace-nowrap">Blog</span>
-        <i class="fa-solid fa-angle-down"></i>
-      </button>
-      <ul id="dropdown-categorias" class="hidden py-2 space-y-2">
-        <li>
-          <a href="#"
-            class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-8 gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
-            Publicaciones
-          </a>
-        </li>
-        <li>
-          <a href="{{ route('admin.categories.index') }}" wire:navigate
-            class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-8 gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
-            Categorias
-          </a>
-        </li>
-        <li>
-          <a href="#"
-            class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-8 gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
-            Ccomentarios
-          </a>
-        </li>
-      </ul>
+        class="flex items-center p-2 rounded-lg dark:text-white hover:bg-light-200 dark:hover:bg-nav-700 group">
+        <i class="fa-solid fa-users"></i>
+        <span class="ms-3">Usuarios</span>
+      </a>
     </li>
+    @endcan
+    @can('roles index')
+
+    <li>
+      <a href="{{ route('admin.roles.index') }}" wire:navigate
+        class="flex items-center p-2 rounded-lg dark:text-white hover:bg-light-200 dark:hover:bg-nav-700 group">
+        <i class="fa-solid fa-user-gear"></i>
+        <span class="ms-3">
+          Roles
+        </span>
+      </a>
+    </li>
+    @endcan
+    @can('permisos index')
+
+    <li>
+      <a href="{{ route('admin.permissions.index') }}" wire:navigate
+        class="flex items-center p-2 rounded-lg dark:text-white hover:bg-light-200 dark:hover:bg-nav-700 group">
+        <i class="fa-solid fa-user-shield"></i>
+        <span class="ms-3">
+          Permisos
+        </span>
+      </a>
+    </li>
+    @endcan
+    @can('ver blog')
+
+    <div>
+      <p class="text-gray-400 ml-2">Blog</p>
+      <li>
+        <a href=""
+          class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-4 gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
+          <i class="fa-solid fa-book"></i>
+          Publicaciones
+        </a>
+      </li>
+      <li>
+        <a href="{{ route('admin.categories.index') }}" wire:navigate
+          class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-4 gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
+          <i class="fa-solid fa-tag"></i>
+          Categorias Post
+        </a>
+      </li>
+      <li>
+        <a href="#"
+          class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-4 gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
+          <i class="fa-solid fa-comment"></i>
+          Comentarios
+        </a>
+      </li>
+      </li>
+    </div>
+    @endcan
   </ul>
 </div>
-
