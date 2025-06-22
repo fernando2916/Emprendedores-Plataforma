@@ -45,16 +45,20 @@
             <div
               class="z-50 hidden my-4 text-base list-none bg-light-300 divide-y divide-gray-100 rounded-md shadow-sm dark:bg-nav-800 w-56 dark:divide-gray-600"
               id="dropdown-user">
-              <div class="px-4 py-3" role="none">
-                <p class="text-sm" role="none">
-                  {{ auth()->user()->nombre_completo }} Admin
+              <div class="px-4 py-3 space-y-2" role="none">
+                <div class="flex flex-col">
+
+                  <p class="text-sm" role="none">
+                    {{ auth()->user()->nombre_completo }}
+                  </p>
+                  <p class="text-xs text-alerts-100">
+                  {{ auth()->user()->roles->pluck('name')->join(', ')  }}
                 </p>
+                </div>
                 <p class="text-sm font-medium truncate text-link-100" role="none">
                   {{ auth()->user()->email }}
                 </p>
-                <p class="">
-                  {{ auth()->user()->roles->pluck('name')->join(', ')  }}
-                </p>
+                
               </div>
               <ul class="py-1" role="none">
                 <li>

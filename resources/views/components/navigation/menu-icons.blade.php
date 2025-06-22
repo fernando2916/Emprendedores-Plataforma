@@ -21,7 +21,7 @@
               <i class="fa-solid fa-user-circle mr-2"></i>
               <div class="">
                 {{ auth()->user()->nombre_completo }}
-                <p class="">
+                <p class="text-xs text-alerts-100">
                   {{ auth()->user()->roles->pluck('name')->join(', ')  }}
                 </p>
                 <p class="text-link-100">{{ auth()->user()->email }}</p>
