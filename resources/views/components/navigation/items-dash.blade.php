@@ -43,30 +43,27 @@
       <button type="button"
         class="flex items-center w-full p-2 text-base transition duration-75 rounded-lg group hover:bg-light-300 dark:hover:bg-nav-700"
         aria-controls="dropdown-categorias" data-collapse-toggle="dropdown-categorias">
-        <i class="fa-solid fa-tag"></i>
-        <span class="flex-1 ms-3 text-left whitespace-nowrap">Categorias</span>
+        <i class="fa-solid fa-book"></i>
+        <span class="flex-1 ms-3 text-left whitespace-nowrap">Blog</span>
         <i class="fa-solid fa-angle-down"></i>
       </button>
       <ul id="dropdown-categorias" class="hidden py-2 space-y-2">
         <li>
           <a href="#"
             class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-8 gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
-            <i class="fa-solid fa-shirt"></i>
-            Categoria Producto
+            Publicaciones
+          </a>
+        </li>
+        <li>
+          <a href="{{ route('admin.categories.index') }}" wire:navigate
+            class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-8 gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
+            Categorias
           </a>
         </li>
         <li>
           <a href="#"
             class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-8 gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
-            <i class="fa-solid fa-laptop-code"></i>
-            Categoria Curso
-          </a>
-        </li>
-        <li>
-          <a href="#"
-            class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-8 gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
-            <i class="fa-solid fa-book"></i>
-            Categoria Blog
+            Ccomentarios
           </a>
         </li>
       </ul>
