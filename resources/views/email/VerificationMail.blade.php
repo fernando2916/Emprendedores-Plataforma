@@ -25,6 +25,7 @@
     background-color: #00122e;
     justify-content: center;
     border-radius: 1rem;
+    padding: 2rem;
   }
 
   .imagen {
@@ -59,6 +60,9 @@
     font-size: 1.5rem;
     font-weight: 800;
     margin: .5rem;
+    background-color: #6e004c;
+    padding: .5rem;
+    border-radius: .5rem;
   }
 
   .prec {
@@ -70,7 +74,7 @@
     margin: 1.25rem 0;
     margin-inline: auto;
     display: flex;
-    justify-content: center;
+    align-items: center;
   }
 
   .link {
@@ -84,6 +88,13 @@
     cursor: pointer;
     text-align: center;
     font-size: 1.25rem;
+  }
+  
+  .centro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
   }
 
 </style>
@@ -104,11 +115,11 @@
             te has registrado satisfactioriamente en Emprendedores Creativos, ya casi esta todo listo, solo debes
             confirmar tu cuenta.
           </p>
-          <div class="my-10">
+          <div class="">
 
-            <p class="text-xl">Utiliza el siguiente código para iniciar sesión en tu cuenta de Emprendedores Creativos
+            <p class="">Utiliza el siguiente código para iniciar sesión en tu cuenta de Emprendedores Creativos
             </p>
-            <div class="my-10">
+            <div class="centro">
 
               <p class="text-lg font-medium">
                 Este código expira en 15 minutos.

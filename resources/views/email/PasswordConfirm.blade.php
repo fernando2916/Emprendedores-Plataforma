@@ -25,6 +25,7 @@
     background-color: #00122e;
     justify-content: center;
     border-radius: 1rem;
+    padding: 2rem;
   }
 
   .imagen {
@@ -63,7 +64,7 @@
 
   .prec {
     font-size: 15px;
-    margin: .5rem;
+    /* margin: .5rem; */
   }
 
   .btn {
@@ -100,24 +101,27 @@
 
           <p class="">Hola
             <span class="saludo">{{ $user->nombre_completo }}:
-            </span>
             <p class="">
               Recibimos tu solicitud para cambiar tu contraseña.
             </p>
           </p>
           <div class="">
-            <span class="saludo">¿No solicitaste esto?</span>            
-            <p class="prec">Si recibiste este correo electrónico, pero no estás intentando restablecer tu contraseña, puedes ignorarlo. No se ha realizado ningún cambio en tu cuenta.
-            </p>
-           
+            
             <div class="btn">
-
+              
               <a class="link"
-                href="{{ env("APP_URL") . "/auth/nueva-contraseña/" . $user->verification_id}} ">
-                Cambiar contraseña
-              </a>
-            </div>
-          </div>
+              href="{{ env("APP_URL") . "/auth/nueva-contraseña/" . $user->verification_id}} ">
+              Cambiar contraseña
+            </a>
+
+        </div>
+      </div>
+      <div>
+
+        <span class="saludo">¿No solicitaste esto?</span>            
+        <p class="prec">Si recibiste este correo electrónico, pero no estás intentando restablecer tu contraseña, puedes ignorarlo. No se ha realizado ningún cambio en tu cuenta.
+        </p>
+      </div>
         </div>
       </div>
     </div>

@@ -22,9 +22,10 @@
   }
 
   .fondo {
-    background-color: #00122e;
+     background-color: #00122e;
     justify-content: center;
     border-radius: 1rem;
+    padding: 2rem;
   }
 
   .imagen {
@@ -59,6 +60,9 @@
     font-size: 1.5rem;
     font-weight: 800;
     margin: .5rem;
+    background-color: #6e004c;
+    padding: .5rem;
+    border-radius: .5rem;
   }
 
   .prec {
@@ -86,6 +90,13 @@
     font-size: 1.25rem;
   }
 
+   .centro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+  }
+
 </style>
 
 </head>
@@ -105,9 +116,9 @@
           </p>
           <div>
 
-            <p class="text-xl">Utiliza el siguiente código para verificar e iniciar sesión en tu cuenta de Emprendedores Creativos
+            <p class="text-xl">Utiliza el siguiente código para verificar e iniciar sesión en tu cuenta de Emprendedores Creativos.
             </p>
-            <div>
+            <div class="centro">
 
               <p class="text-lg font-medium">
                 Este código expira en 15 minutos.
