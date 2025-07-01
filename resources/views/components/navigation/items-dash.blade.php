@@ -64,14 +64,7 @@
       </a>
     </li>
     @endcan
-      <li>
-        <a href="#"
-          class="flex items-center w-full p-2 transition duration-75 rounded-lg gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
-          <i class="fa-solid fa-comment"></i>
-          Comentarios
-        </a>
-      </li>
-      </li>
+      
     </div>
     @endcan
   </ul>

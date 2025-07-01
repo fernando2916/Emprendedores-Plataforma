@@ -1,6 +1,6 @@
 <nav class="items-center gap-2 hidden md:flex">
   <div class="flex items center gap-2">
-    <a href="/" class="">
+    <a href="/" wire:navigate class="">
       <i class="fa-solid fa-house"></i>
       Inicio
     </a>

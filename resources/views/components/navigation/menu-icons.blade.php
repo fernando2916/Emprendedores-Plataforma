@@ -18,7 +18,8 @@
             {{-- href="{{ route("perfil.index") }}"  --}}
             class="flex items-center gap-x-3">
 
-              <i class="fa-solid fa-user-circle mr-2"></i>
+              <img src="https://ui-avatars.com/api/?name={{ urlencode(auth()->user()->nombre_completo) }}"
+                            class="w-[25px] h-[25px] rounded-full" />
               <div class="">
                 {{ auth()->user()->nombre_completo }}
                 <p class="text-xs text-alerts-100">
