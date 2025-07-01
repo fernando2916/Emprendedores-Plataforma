@@ -56,7 +56,7 @@
     </a>
   </div>
   <div class="flex items center gap-2">
-    <a wire:navigate href="/" class="">
+    <a wire:navigate href="{{ route('blog.index') }}" class="">
       <i class="fa-solid fa-book"></i>
       Blog
     </a>

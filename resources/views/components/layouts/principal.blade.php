@@ -13,7 +13,7 @@
 </head>
 <body class="bg-fondo-100 dark:bg-fondo-200 font-display text-white selection:bg-select-100 selection:text-white">
   <x-navigation.header/>
-  <main class="pt-[70px]">
+  <main class="pt-[63px]">
     @yield('contenido')
   </main>
   <x-navigation.footer/>

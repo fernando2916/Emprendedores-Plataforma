@@ -45,17 +45,20 @@
 
     <div>
       <p class="text-gray-400 ml-2">Blog</p>
+      @can('blog index')
+        
       <li>
-        <a href=""
-          class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-4 gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
-          <i class="fa-solid fa-book"></i>
-          Publicaciones
-        </a>
-      </li>
+        <a href="{{ route('admin.blogs.index') }}" wire:navigate
+        class="flex items-center w-full p-2 transition duration-75 rounded-lg  gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
+        <i class="fa-solid fa-book"></i>
+        Publicaciones
+      </a>
+    </li>
+    @endcan
       @can('categoria post index')        
       <li>
         <a href="{{ route('admin.categories.index') }}" wire:navigate
-        class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-4 gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
+        class="flex items-center w-full p-2 transition duration-75 rounded-lg gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
         <i class="fa-solid fa-tag"></i>
         Categorias Post
       </a>
@@ -63,7 +66,7 @@
     @endcan
       <li>
         <a href="#"
-          class="flex items-center w-full p-2 transition duration-75 rounded-lg pl-4 gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
+          class="flex items-center w-full p-2 transition duration-75 rounded-lg gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
           <i class="fa-solid fa-comment"></i>
           Comentarios
         </a>

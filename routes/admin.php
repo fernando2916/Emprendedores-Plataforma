@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\CategoriaPostController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\PermisionController;
@@ -16,3 +17,4 @@ Route::resource('/roles', RoleController::class)->names('admin.roles');
 Route::resource('/permissions', PermisionController::class)->names('admin.permissions');
 
 Route::resource('/categories', CategoriaPostController::class)->names('admin.categories');
+Route::resource('/blogs', BlogController::class)->names('admin.blogs');

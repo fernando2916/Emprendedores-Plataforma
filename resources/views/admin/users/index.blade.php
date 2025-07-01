@@ -1,7 +1,7 @@
 @extends('components.layouts.admin')
 
 @section('contenido')
-<div class="w-full flex justify-between items-center">
+<div class="w-full flex justify-between items-center max-w-screen-xl mx-auto">
   <p class="text-xl font-semibold">
     Usuarios
   </p>

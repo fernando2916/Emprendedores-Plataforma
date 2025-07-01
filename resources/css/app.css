@@ -6,6 +6,8 @@
 @source '../**/*.js';
 
 @custom-variant dark (&:where(.dark, .dark *));
+@import './post-content.css';
+@import 'quill/dist/quill.snow.css';
 
 /* Flowbite */
 @import "flowbite/src/themes/default";
@@ -27,6 +29,7 @@
 
         --color-cont-100: #00122e;
         --color-cont-200: #59799C;
+        --color-cont-300: #041634;
 
     
         --color-nav-50: #eedbff;

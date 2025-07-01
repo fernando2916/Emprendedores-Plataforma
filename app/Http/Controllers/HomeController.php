@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
     public function index()
     {
-        return view('home');
+        $ultimosPost = Blog::latest()->take(3)->get();
+        return view('home', compact('ultimosPost'));
     }
 }

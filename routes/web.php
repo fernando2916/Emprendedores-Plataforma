@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomeController;
+use App\Livewire\ComentarioPost;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -26,8 +28,12 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 // Route::get('/facturacion', [FacturacionController::class, 'index'])->name('facturacion.index');
 
 // });
-// // Blog
-// Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
+
+// Blog
+ Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
+ Route::get('/blog/{blog:slug}', [BlogController::class, 'show'])->name('blog.show');
+
+ Route::get('/comentarios', ComentarioPost::class)->name('comentarios.store');
 // // Tienda
 // Route::get('/tienda', [ContactoController::class, 'index'])->name('tienda.index');
 // // Cursos
