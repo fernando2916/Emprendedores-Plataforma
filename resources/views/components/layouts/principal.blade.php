@@ -18,6 +18,7 @@
   </main>
   <x-navigation.footer/>
   @livewireScripts
+  @stack('scripts')
  @if (session('swal'))
         <script>
             Swal.fire(@json(session('swal')));

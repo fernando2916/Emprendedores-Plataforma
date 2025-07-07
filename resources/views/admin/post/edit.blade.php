@@ -10,7 +10,7 @@
 <div class="bg-light-200 dark:bg-cont-100 p-5 rounded-lg">
   <div class="">
     <div class="">
-      <h3 class="">Editar Post</h3>
+      <h3 class="text-3xl font-bold">Editar Post</h3>
     </div>
     <div class="mt-5">
       <form action="{{ route('admin.blogs.update', $blog) }}" method="POST" noValidate class="space-y-3"

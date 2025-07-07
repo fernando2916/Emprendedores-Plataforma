@@ -49,6 +49,8 @@
     <div>
       <h3 class="mb-4 text-2xl font-semibold">Últimos agregados</h3>
       <ul class="flex flex-col gap-8">
+        @if ($ultimosPosts->isNotEmpty())
+          
         @foreach ( $ultimosPosts as $post )
         <a href="{{ route('blog.show', $post->slug) }}" wire:navigate>
           <article class="grid grid-cols-5 gap-4 items-start bg-light-200 dark:bg-cont-100 rounded-lg">
@@ -91,7 +93,11 @@
             </div>
           </article>
         </a>
-        @endforeach
+        @endforeach        
+        @else
+         <p class="text-gray-400">Aún no hay más artículos recientes.</p>
+        @endif
+
       </ul>
     </div>
   </div>

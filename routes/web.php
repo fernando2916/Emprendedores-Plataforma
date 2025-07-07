@@ -1,13 +1,15 @@
 <?php
 
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\DiseñoController;
 use App\Http\Controllers\HomeController;
 use App\Livewire\ComentarioPost;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-// Route::get('/diseño-grafico', [DiseñoController::class, 'index'])->name('diseno.index');
+Route::get('/diseño-grafico', [DiseñoController::class, 'index'])->name('diseño.index');
+Route::get('/diseño-grafico/proyectos/{proyect:slug}', [DiseñoController::class, 'show'])->name('diseno.show');
 // Route::get('/fotografia', [FotografiaController::class, 'index'])->name('fotografia.index');
 // Route::get('/diseño-y-desarrollo-web', [DiseñoWebController::class, 'index'])->name('desarrollo.index');
 // Route::get('/impresión', [ImpresionController::class, 'index'])->name('impresion.index');

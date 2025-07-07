@@ -9,7 +9,7 @@
 <div class="bg-light-200 dark:bg-cont-100 p-5 rounded-lg">
     <div class="">
         <div class="">
-            <h3 class="">Editar Categoria</h3>
+            <h3 class="text-3xl font-bold">Editar Categoria</h3>
         </div>
         <div class="">
             <form action="{{ route('admin.categories.update', $category) }}" method="POST" noValidate>

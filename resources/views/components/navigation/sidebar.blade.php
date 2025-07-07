@@ -1,7 +1,7 @@
 <!-- drawer init and show -->
 <div class="text-center">
   <button
-    class="bg-btn-200 hover:bg-btn-400 dark:bg-btn-400 dark:hover:bg-btn-600 rounded-md p-1 text-white transition-colors duration-150 outline-none box-content"
+    class="bg-btn-200 hover:bg-btn-400 dark:bg-btn-400 dark:hover:bg-btn-600 rounded-md p-1 text-white transition-colors duration-150 outline-none box-content cursor-pointer"
     type="button" data-drawer-target="drawer-navigation" data-drawer-show="drawer-navigation"
     aria-controls="drawer-navigation">
     <i class="fa-solid fa-bars text-lg p-1"></i>
@@ -52,7 +52,7 @@
     @endauth
   </div>
   <button type="button" data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation"
-    class=" bg-btn-200 hover:bg-btn-400  rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center dark:hover:bg-btn-600 dark:hover:text-white">
+    class=" bg-btn-200 hover:bg-btn-400  rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center dark:hover:bg-btn-600 dark:hover:text-white cursor-pointer">
     <i class="fa-solid fa-xmark text-lg px-1.5"></i>
     <span class="sr-only">Close menu</span>
   </button>

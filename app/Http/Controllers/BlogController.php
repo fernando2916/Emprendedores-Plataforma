@@ -18,10 +18,14 @@ class BlogController extends Controller
         $postReciente = Blog::latest()->first();
 
         // Últimos 3 excluyendo el más reciente
-        $ultimosPosts = Blog::where('id', '!=', $postReciente->id)
-            ->latest()
-            ->take(3)
-            ->get();
+       $ultimosPosts = collect(); // por si no hay posts
+
+        if ($postReciente) {
+            $ultimosPosts = Blog::where('id', '!=', $postReciente->id)
+                ->latest()
+                ->take(3)
+                ->get();
+        }
         return view('plataforma.blog.index', compact('blogs', 'postReciente', 'ultimosPosts' ));
     }
 

@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
             modules: {
                 toolbar: [
       [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
-      ['bold', 'italic', 'underline'],
+      ['bold', 'italic', 'underline', 'strike'],
       [{ 'color': [] }, { 'background': [] }],
       [{ 'list': 'ordered'}, { 'list': 'bullet' }, { 'list': 'check' }],
       ['blockquote', 'code-block'],

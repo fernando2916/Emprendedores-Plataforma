@@ -10,7 +10,7 @@
 <div class="bg-light-200 dark:bg-cont-100 p-5 rounded-lg">
   <div class="">
     <div class="">
-      <h3 class="">Crear Post</h3>
+      <h3 class="text-3xl font-bold">Crear Post</h3>
     </div>
     <div class="mt-5">
       <form action="{{ route('admin.blogs.store') }}" method="POST" noValidate class="space-y-3"

@@ -137,7 +137,7 @@ class BlogController extends Controller
         // mensaje flash
         session()->flash('swal', [
             'icon' => 'success',
-            'title' => 'Post actualizao correctamente',
+            'title' => 'Post actualizado correctamente',
             'background' => '#120024',
             'color' => '#ffffff',
         ]);
