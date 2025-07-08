@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/diseño-grafico', [DiseñoController::class, 'index'])->name('diseño.index');
+Route::get('/diseño-grafico', [DiseñoController::class, 'index'])->name('diseno.index');
 Route::get('/diseño-grafico/proyectos/{proyect:slug}', [DiseñoController::class, 'show'])->name('diseno.show');
 // Route::get('/fotografia', [FotografiaController::class, 'index'])->name('fotografia.index');
 // Route::get('/diseño-y-desarrollo-web', [DiseñoWebController::class, 'index'])->name('desarrollo.index');
