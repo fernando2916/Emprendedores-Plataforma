@@ -32,6 +32,17 @@ class PermissionSeeder extends Seeder
             "permisos delete",
 
             "ver blog",
+            "ver promo",
+
+            "banner index",
+            "banner create",
+            "banner edit",
+            "banner delete",
+            
+            "aviso index",
+            "aviso create",
+            "aviso edit",
+            "aviso delete",
                       
             "blog index",
             "blog create",

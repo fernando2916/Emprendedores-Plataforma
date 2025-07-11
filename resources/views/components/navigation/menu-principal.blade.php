@@ -15,9 +15,9 @@
   </button>
 
   <!-- Dropdown servicios -->
-  <div class="z-10 hidden bg-light-300 rounded-lg shadow-sm w-52 dark:bg-nav-800"
+  <div class="z-50 hidden bg-light-300 rounded-lg shadow-sm w-52 dark:bg-nav-800"
     id="dropdownDelay">
-    <div class="p-1 space-y-0.5">
+    <div class="p-1 space-y-0.5 z-50 ">
       <a 
         class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm dark:text-white hover:bg-light-200 focus:outline-hidden focus:bg-gray-100 text-slate-200 dark:hover:bg-nav-700" 
         wire:navigate 
@@ -78,7 +78,7 @@
   </button>
 
    <!-- Dropdown empresa -->
-  <div class="z-10 hidden bg-light-300 rounded-lg shadow-sm w-52 dark:bg-nav-800"
+  <div class="z-50 hidden bg-light-300 rounded-lg shadow-sm w-52 dark:bg-nav-800"
     id="dropdownDelay2">
     <div class="p-1 space-y-0.5">
         <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm dark:text-white hover:bg-light-200 focus:outline-hidden focus:bg-gray-100 text-slate-200 dark:hover:bg-nav-700" 

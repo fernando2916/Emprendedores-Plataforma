@@ -3,7 +3,7 @@
 <div class="swiper mySwiper relative">
     <div class="swiper-wrapper">
         <!-- Slides -->
-        @forelse ($opiniones as $opinion )
+        @foreach ($opiniones as $opinion )
 
         <div class="swiper-slide mt-5 flex flex-col justify-center">
             <p class="flex p-5 gap-2 items-center justify-center md:text-3xl font-semibold">
@@ -14,11 +14,8 @@
             <p class="text-xl">{{ $opinion->autor }}</p>
             <p class="text-link-300">{{ $opinion->red_social }}</p>
         </div>
-        @empty
-        <div class="">
-            <p class="">No hay Opiniones todavía.</p>
-        </div>
-        @endforelse
+       
+        @endforeach
 
     </div>
     <!-- If we need pagination -->

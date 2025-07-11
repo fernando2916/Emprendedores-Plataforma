@@ -8,6 +8,7 @@ import 'swiper/css/autoplay';
 
 // Inicializa Swiper (puedes mover esto al DOMContentLoaded o Alpine/Livewire hook si prefieres)
 function startSwiperServicios() {
+
   new Swiper('.mySwiper-slider', {
     modules: [Autoplay, Pagination],
     loop: true,
@@ -21,10 +22,7 @@ function startSwiperServicios() {
       el: '.swiper-pagination',
       clickable: true,
     },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
+
   });
 
 }

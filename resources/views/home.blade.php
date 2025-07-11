@@ -2,14 +2,47 @@
 
 @section('contenido')
 
-@include('plataforma.home.carousel')
+@if ($banners->isNotEmpty())
+  
+  @include('plataforma.home.carousel', $banners)
+@else
+  <div class="w-full bg-light-300 dark:to-[#010338] bg-radial dark:from-link-300 p-4 md:p-6 lg:p-8 xl:h-[750px]">
+        
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-5 place-content-center">
+                <div class="grid place-content-center p-10 gap-y-3 lg:mx-24 xl:h-[500px]">
+                    <div class="text-5xl font-semibold text-left">
+                        Emprendedores Creativos &copy;
+                        <p class="py-3 dark:text-white text-base font-normal text-justify">
+                            Una identidad visual correctamente desarrollada, llamara la
+                            atención de tus clientes y lograra que se acuerden de ti a
+                            futuro, eso se logra trabajando de la mano con profesionales.
+                        </p>
+                    </div>
+                    <div class="flex flex-col gap-2 w-full">
+                        <a href='/contacto'>
+                        <button
+                            class='dark:bg-btn-400 dark:hover:bg-btn-600 bg-btn-200 hover:bg-btn-400 transition-colors duration-300 flex items-center gap-3 w-full place-content-center p-2 rounded-md text-white cursor-pointer'>
+                            <i class="fa-solid fa-envelope"></i>
+                            Contacto
+                        </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="md:flex justify-center bg-center w-auto p-12">
+                    <img src="{{ asset('images/maquina.svg') }}" alt="imagen imprenta" class="w-[45rem]" />
+                </div>
+            </div>
+        </div>
+@endif
 @auth
 <div class="flex justify-center">
     <h1 class="text-xl md:text-4xl font-bold">
         Hola de nuevo {{ auth()->user()->nombre_completo }}</h1>
 </div>
 @endauth
+
 @include('plataforma.home.servicios')
+
 <div class="mx-auto px-5 lg:container">
     <div class="">
         productos
@@ -25,8 +58,8 @@
             @forelse ($ultimosPost as $post)
            <a wire:navigate href={{ route('blog.show', $post->slug ) }} class="mb-4 block overflow-hidden rounded-lg">
             <article class="dark:bg-cont-100 bg-light-200 text-white">
-              <div class="relative">
-                <img src={{ $post->imagen ? Storage::url($post->imagen) : '' }} alt=""
+              <div>
+                <img src={{ $post->imagen ? Storage::url($post->imagen) : '' }} alt="{{  $post->titulo  }}"
                 class=" aspect-video w-full object-cover "
                 />
               </div>

@@ -1,4 +1,8 @@
-<header class="flex justify-between w-full items-center p-3 bg-light-100 dark:bg-nav-900 fixed z-50">
+<div class="fixed mx-auto w-full z-50">
+<x-aviso-top :aviso="$aviso" />
+
+
+<header class="flex justify-between w-full items-center p-3 bg-light-100 dark:bg-nav-900">
   <div>
     <a wire:navigate href="{{ route('home') }}">
 
@@ -15,3 +19,5 @@
   <x-navigation.menu-account />
   @endauth
 </header>
+
+</div>

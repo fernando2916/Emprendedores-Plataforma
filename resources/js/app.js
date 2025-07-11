@@ -6,6 +6,7 @@ import './assets/quill';
 import './assets/typewriter';
 import './assets/slider';
 import './assets/slider-servicios';
+import './assets/slider-banner';
 
 document.addEventListener('livewire:navigated', () => {
     // Volver a inicializar Flowbite después de cada navegación interna

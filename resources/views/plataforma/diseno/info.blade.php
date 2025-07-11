@@ -204,7 +204,14 @@
       <h2 class="text-4xl font-semibold text-center">
         Lo que nuestros clientes dicen:
       </h2>
+      @if ($opiniones->isNotEmpty())
+        
       <x-opiniones-carousel :opiniones="$opiniones"/>
+      @else
+        <div class=" mt-5">
+            <p class="font-semibold">No hay Opiniones todavía.</p>
+        </div>
+      @endif
     </div>
   </div>
 </section>

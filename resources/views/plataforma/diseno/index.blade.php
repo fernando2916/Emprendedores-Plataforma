@@ -5,7 +5,7 @@ Diseño Gráfico |
 @endsection
 
 @section('contenido')
-<header class="relative bg-cover md:h-[45rem] lg:h-[65rem] z-10">
+<header class="relative bg-cover md:h-[45rem] lg:h-[65rem]">
   <img src="{{ asset('images/disenadores.webp') }}" alt="diseñadores" class="opacity-30 h-full w-full object-cover">
   <div class="absolute w-full h-full flex flex-col top-0 items-center justify-center ">
     <div class="text-center p-3 space-y-3 md:space-y-7 relative lg:-top-24">

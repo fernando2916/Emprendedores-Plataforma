@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\AvisoController;
+use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\CategoriaPostController;
 use App\Http\Controllers\Admin\CotizacionDesingController;
@@ -27,4 +29,6 @@ Route::resource('/planes', PlansDesingController::class)->names('admin.plans');
 Route::resource('/cotizaciones', CotizacionDesingController::class)->names('admin.cotizacion');
 Route::resource('/proyectos', ProyectController::class)->names('admin.proyecto');
 Route::resource('/opiniones', OpDesingController::class)->names('admin.opinion');
+Route::resource('/banners', BannerController::class)->names('admin.banner');
+Route::resource('/avisos', AvisoController::class)->names('admin.aviso');
 

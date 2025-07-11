@@ -41,6 +41,35 @@
       </a>
     </li>
     @endcan
+
+    @can('ver promo')
+      
+    <div>
+      <p class="text-gray-400 ml-2">Promo</p>
+      @can('banner index')
+        
+      <li>
+        <a href="{{ route('admin.banner.index') }}" wire:navigate
+        class="flex items-center w-full p-2 transition duration-75 rounded-lg  gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
+        <i class="fa-solid fa-image"></i>
+        Diapositivas
+      </a>
+    </li>
+    @endcan
+      @can('aviso index')
+        
+      <li>
+        <a href="{{ route('admin.aviso.index') }}" wire:navigate
+        class="flex items-center w-full p-2 transition duration-75 rounded-lg  gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
+        <i class="fa-solid fa-bullhorn"></i>
+      Avisos
+      </a>
+    </li>
+    @endcan
+      
+    </div>
+    @endcan
+
     @can('ver blog')
 
     <div>

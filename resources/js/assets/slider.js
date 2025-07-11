@@ -8,9 +8,15 @@ import 'swiper/css/autoplay';
 
 // Inicializa Swiper (puedes mover esto al DOMContentLoaded o Alpine/Livewire hook si prefieres)
 function startSwiperDiseño() {
+   const swiperEl = document.querySelector('.mySwiper');
+  const slides = swiperEl?.querySelectorAll('.swiper-slide') ?? [];
+
+    if (!swiperEl || slides.length === 0) return;
+
+
   new Swiper('.mySwiper', {
     modules: [Autoplay, Pagination],
-    loop: true,
+    loop: slides.length > 1, 
     autoplay: {
         delay: 2500,
         disableOnInteraction: false,
@@ -20,11 +26,7 @@ function startSwiperDiseño() {
     pagination: {
       el: '.swiper-pagination',
       clickable: true,
-    },
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
+    },    
   });
 
 }
