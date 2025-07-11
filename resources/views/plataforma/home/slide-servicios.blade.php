@@ -13,7 +13,7 @@
         <h2 class="flex justify-center text-xl font-medium py-4">
           Diseño Gráfico
         </h2>
-        <p class="flex text-left items-center text-sm justify-center">
+        <p class="flex text-left items-center text-lgjustify-center">
           Conocemos la importancia de tener una buena imagen para los clientes, desde un logotipo hasta toda la identidad corporativa de tu marca.
         </p>
       </a>
