@@ -3,29 +3,23 @@ import Typewriter from 'typewriter-effect/dist/core';
 function startTypewriterEffect() {
 
   
-  const target = document.getElementById('typewriter');
+  const target = document.getElementById('typewriter-foto');
   
   if (target) {
     new Typewriter(target, {
       loop: true,
       delay: 70,
     })
-  .typeString('Identidad Corporativa')
+  .typeString('Fotografía Corporativa')
   .pauseFor(1000)
   .deleteAll()
-  .typeString('Imagen Corporativa')
+  .typeString('Fotografía de Retrato')
   .pauseFor(1000)
   .deleteAll()
-  .typeString('Ilustración')
+  .typeString('Fotografía de Producto')
   .pauseFor(1000)
   .deleteAll()
-  .typeString('Pre-prensa')
-  .pauseFor(1000)
-  .deleteAll()
-  .typeString('Editorial')
-  .pauseFor(1000)
-  .deleteAll()
-  .typeString('Tipografía')
+  .typeString('Fotografía en Estudio')
   .pauseFor(1000)
   .deleteAll()
   .start();

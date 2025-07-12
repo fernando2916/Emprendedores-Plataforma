@@ -4,6 +4,7 @@ import './assets/preview_image';
 import './assets/preview_images';
 import './assets/quill';
 import './assets/typewriter';
+import './assets/typewrite-foto';
 import './assets/slider';
 import './assets/slider-servicios';
 import './assets/slider-banner';

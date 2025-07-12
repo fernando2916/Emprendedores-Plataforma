@@ -81,7 +81,7 @@
     >
       <a
         wire:navigate 
-        {{-- href="{{ route("fotografia.index") }}" --}}
+        href="{{ route("fotografia.index") }}"
         class="flex items-center gap-3 p-3 text-lg"
       >
         <i class="fa-solid fa-camera"></i>

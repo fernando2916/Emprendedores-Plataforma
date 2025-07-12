@@ -35,10 +35,20 @@
         </div>
 @endif
 @auth
-<div class="flex justify-center">
-    <h1 class="text-xl md:text-4xl font-bold">
-        Hola de nuevo {{ auth()->user()->nombre_completo }}</h1>
-</div>
+    @php
+        $user = auth()->user();
+        $recienRegistrado = now()->diffInMinutes($user->created_at) < 10 && !session('welcome_message_shown');
+        
+        if ($recienRegistrado) {
+            session(['welcome_message_shown' => true]);
+        }
+    @endphp
+
+    <div class="flex justify-center">
+        <h2 class="text-xl md:text-4xl font-bold">
+            {{ $recienRegistrado ? '¡Bienvenido/a' : 'Hola de nuevo' }}, {{ $user->nombre_completo }}
+        </h2>
+    </div>
 @endauth
 
 @include('plataforma.home.servicios')
