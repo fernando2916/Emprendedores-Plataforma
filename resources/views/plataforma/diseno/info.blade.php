@@ -6,14 +6,14 @@
     <div class="col-span-full lg:col-span-6">
       <h2 class="font-semibold text-3xl md:text-5xl">Comunicación visual en la actualidad</h2>
       <p class="text-justify mt-10 text-lg">
-        Digamos por ejemplo que se encuentra con la necesidad de comunicar
-        un mensaje, ¿de qué forma lo comunicaría? Puede ir contándoselo
+        Digamos por ejemplo, te encuentras con la necesidad de comunicar
+        un mensaje, ¿de qué forma lo comunicarías?. Puedes ir contándoselo de
         persona a persona, transmitirlo en alto con un megáfono o emitirlo
-        por la radio para que llegue a más receptores. En este caso estaría
+        por la radio para que llegue a más receptores. En este caso estarías
         utilizando la comunicación verbal. Pero ¿y si para comunicar ese
         mismo mensaje utiliza como medio un cartel, un folleto o un anuncio
         en la prensa?
-        <span class="font-semibold mx-1">
+        <span class="font-bold mx-1">
           Entonces estaría utilizando un tipo de comunicación visual
           denominada diseño gráfico.
         </span>
@@ -26,7 +26,7 @@
         necesidad previa de comunicación, de transmisión de mensajes a un
         receptor por medio de signos visuales. En todo proceso de
         comunicación aparecen tres elementos básicos:
-        <span class="font-semibold mx-1">
+        <span class="font-bold mx-1">
           un emisor, un mensaje y un receptor.
         </span>
         En comunicación gráfica, el emisor es la empresa o individuo que
@@ -46,12 +46,12 @@
       <h2 class="font-semibold text-3xl md:text-5xl">Profesionales en Diseño Gráfico en México</h2>
       <p class="text-justify mt-10 text-lg">
         Ya sea que esté buscando lanzar un nuevo negocio o simplemente un
-        rebrand existente,
-        <span class="font-semibold mx-1">
+        re-diseño existente,
+        <span class="font-bold mx-1">
           el diseño gráfico es esencial para el éxito.
         </span>
         Puede comenzar con
-        <span class="font-semibold mx-1">
+        <span class="font-bold mx-1">
           una imagen cautivadora que capturará la atención de sus usuarios
         </span>
         y conduzca a una página de destino bien diseñada o fotos de
@@ -181,8 +181,7 @@
       logo simple para aumentar la visibilidad o una estrategia de marca
       compleja, puede estar seguro de que un diseñador gráfico obtendrá
       el trabajo. Si necesita un logotipo personalizado creado para su
-      negocio, comuníquese con los diseñadores gráficos de Creative
-      Studio®.
+      negocio, comuníquese con los diseñadores gráficos de Emprendedores Creativos®.
     </p>
     <p class="text-justify p-2 text-xl lg:mx-10">
       Además de crear diseños atractivos para medios de impresión y

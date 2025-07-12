@@ -36,7 +36,7 @@ Diseño Gráfico |
       <div>
         En
         <span class="text-link-100">Emprendedores Creativos&copy;</span>
-        hemos desarrollado un proceso creativo para crear marcas únicas,
+        hemos desarrollado un proceso creativo y que evoluaciona para crear marcas únicas,
         nos encargamos de implementar de forma integral toda la
         comunicación visual en los diferentes medios digitales e impresos,
         aumentando con ello el reconocimmiento de la marca y la atracción
