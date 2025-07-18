@@ -43,30 +43,30 @@
     @endcan
 
     @can('ver promo')
-      
+
     <div>
       <p class="text-gray-400 ml-2">Promo</p>
       @can('banner index')
-        
+
       <li>
         <a href="{{ route('admin.banner.index') }}" wire:navigate
-        class="flex items-center w-full p-2 transition duration-75 rounded-lg  gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
-        <i class="fa-solid fa-image"></i>
-        Diapositivas
-      </a>
-    </li>
-    @endcan
+          class="flex items-center w-full p-2 transition duration-75 rounded-lg  gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
+          <i class="fa-solid fa-image"></i>
+          Diapositivas
+        </a>
+      </li>
+      @endcan
       @can('aviso index')
-        
+
       <li>
         <a href="{{ route('admin.aviso.index') }}" wire:navigate
-        class="flex items-center w-full p-2 transition duration-75 rounded-lg  gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
-        <i class="fa-solid fa-bullhorn"></i>
-      Avisos
-      </a>
-    </li>
-    @endcan
-      
+          class="flex items-center w-full p-2 transition duration-75 rounded-lg  gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
+          <i class="fa-solid fa-bullhorn"></i>
+          Avisos
+        </a>
+      </li>
+      @endcan
+
     </div>
     @endcan
 
@@ -75,72 +75,117 @@
     <div>
       <p class="text-gray-400 ml-2">Blog</p>
       @can('blog index')
-        
+
       <li>
         <a href="{{ route('admin.blogs.index') }}" wire:navigate
-        class="flex items-center w-full p-2 transition duration-75 rounded-lg  gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
-        <i class="fa-solid fa-book"></i>
-        Publicaciones
-      </a>
-    </li>
-    @endcan
-      @can('categoria post index')        
+          class="flex items-center w-full p-2 transition duration-75 rounded-lg  gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
+          <i class="fa-solid fa-book"></i>
+          Publicaciones
+        </a>
+      </li>
+      @endcan
+      @can('categoria post index')
       <li>
         <a href="{{ route('admin.categories.index') }}" wire:navigate
-        class="flex items-center w-full p-2 transition duration-75 rounded-lg gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
-        <i class="fa-solid fa-tag"></i>
-        Categorias Post
-      </a>
-    </li>
-    @endcan
-      
+          class="flex items-center w-full p-2 transition duration-75 rounded-lg gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
+          <i class="fa-solid fa-tag"></i>
+          Categorias Post
+        </a>
+      </li>
+      @endcan
+
     </div>
     @endcan
     @can('ver diseño')
 
-    <div>
-      <p class="text-gray-400 ml-2">Diseño</p>
-      @can('plan desing index')
-        
-      <li>
-        <a href="{{ route('admin.plans.index') }}" wire:navigate
-        class="flex items-center w-full p-2 transition duration-75 rounded-lg  gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
-        <i class="fa-solid fa-dollar-sign"></i>
-        Planes Diseño
-      </a>
-    </li>
+      <div>
+          <p class="text-gray-400 ml-2">Diseño</p>
+          @can('plan desing index')
+
+            <li>
+              <a href="{{ route('admin.plans.index') }}" wire:navigate
+                class="flex items-center w-full p-2 transition duration-75 rounded-lg  gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
+                <i class="fa-solid fa-dollar-sign"></i>
+                Planes Diseño
+              </a>
+            </li>
+          @endcan
+          @can('cotizacion desing index')
+
+          <li>
+            <a href="{{ route('admin.cotizacion.index') }}" wire:navigate
+              class="flex items-center w-full p-2 transition duration-75 rounded-lg  gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
+              <i class="fa-solid fa-folder-tree"></i>
+              Cotizaciones Diseño
+            </a>
+          </li>
+          @endcan
+          @can('proyectos index')
+
+          <li>
+            <a href="{{ route('admin.proyecto.index') }}" wire:navigate
+              class="flex items-center w-full p-2 transition duration-75 rounded-lg  gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
+              <i class="fa-solid fa-briefcase"></i>
+              Proyectos Diseño
+            </a>
+          </li>
+          @endcan
+          @can('opinion desing index')
+          <li>
+            <a href="{{ route('admin.opinion.index') }}" wire:navigate
+              class="flex items-center w-full p-2 transition duration-75 rounded-lg  gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
+              <i class="fa-solid fa-message"></i>
+              Opiniones Diseño
+            </a>
+          </li>
+          @endcan
+      </div>
     @endcan
-      @can('cotizacion desing index')
-        
-      <li>
-        <a href="{{ route('admin.cotizacion.index') }}" wire:navigate
-        class="flex items-center w-full p-2 transition duration-75 rounded-lg  gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
-        <i class="fa-solid fa-folder-tree"></i>
-        Cotizaciones Diseño
-      </a>
-    </li>
-    @endcan      
-      @can('proyectos index')
-        
-      <li>
-        <a href="{{ route('admin.proyecto.index') }}" wire:navigate
-        class="flex items-center w-full p-2 transition duration-75 rounded-lg  gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
-        <i class="fa-solid fa-briefcase"></i>
-        Proyectos Diseño
-      </a>
-    </li>
-    @endcan      
-      @can('opinion desing index')
-        
-      <li>
-        <a href="{{ route('admin.opinion.index') }}" wire:navigate
-        class="flex items-center w-full p-2 transition duration-75 rounded-lg  gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
-        <i class="fa-solid fa-message"></i>
-        Opiniones Diseño
-      </a>
-    </li>
-    @endcan      
-    </div>
+
+    @can('ver foto')
+
+      <div>
+          <p class="text-gray-400 ml-2">Fotografía</p>
+          @can('paquete foto index')
+
+            <li>
+              <a href="{{ route('admin.paquete.index') }}" wire:navigate
+                class="flex items-center w-full p-2 transition duration-75 rounded-lg  gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
+                <i class="fa-solid fa-dollar-sign"></i>
+                Paquetes Foto
+              </a>
+            </li>
+          @endcan
+          @can('cotizacion foto index')
+
+          <li>
+            <a href="{{ route('admin.foto.index') }}" wire:navigate
+              class="flex items-center w-full p-2 transition duration-75 rounded-lg  gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
+              <i class="fa-solid fa-folder-tree"></i>
+              Cotizaciones Foto
+            </a>
+          </li>
+          @endcan
+          @can('sesiones foto index')
+
+          <li>
+            <a href="{{ route('admin.sesion.index') }}" wire:navigate
+              class="flex items-center w-full p-2 transition duration-75 rounded-lg  gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
+              <i class="fa-solid fa-folder"></i>
+              Portafolio
+            </a>
+          </li>
+          @endcan
+          @can('testimonio foto index')
+          <li>
+            <a href="{{ route('admin.testimonio.index') }}" wire:navigate
+              class="flex items-center w-full p-2 transition duration-75 rounded-lg  gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
+              <i class="fa-solid fa-message"></i>
+              Testimonios Fotografía
+            </a>
+          </li>
+          @endcan
+      </div>
     @endcan
   </ul>
 </div>

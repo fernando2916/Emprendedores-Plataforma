@@ -31,9 +31,8 @@ class PermissionSeeder extends Seeder
             "permisos edit",
             "permisos delete",
 
-            "ver blog",
             "ver promo",
-
+            
             "banner index",
             "banner create",
             "banner edit",
@@ -43,15 +42,21 @@ class PermissionSeeder extends Seeder
             "aviso create",
             "aviso edit",
             "aviso delete",
-                      
+            
+            "ver blog",
             "blog index",
             "blog create",
             "blog edit",
             "blog delete",
+
+            "categoria post index",
+            "categoria post create",
+            "categoria post edit",
+            "categoria post delete",
             
             "ver diseño",
             "cotizacion desing index",
-                      
+
             "plan desing index",
             "plan desing create",
             "plan desing edit",
@@ -67,11 +72,28 @@ class PermissionSeeder extends Seeder
             "opinion desing edit",
             "opinion desing delete",
             
-            "categoria post index",
-            "categoria post create",
-            "categoria post edit",
-            "categoria post delete",
+            "ver foto",
+                      
+            "paquete foto index",
+            "paquete foto create",
+            "paquete foto edit",
+            "paquete foto delete",
             
+            "cotizacion foto index",
+            "cotizacion foto create",
+            "cotizacion foto edit",
+            "cotizacion foto delete",
+            
+            "sesiones foto index",
+            "sesiones foto create",
+            "sesiones foto edit",
+            "sesiones foto delete",
+            
+            "testimonio foto index",
+            "testimonio foto create",
+            "testimonio foto edit",
+            "testimonio foto delete",                                  
+                                 
             "categoria curso index",
             "categoria curso create",
             "categoria curso edit",
