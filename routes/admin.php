@@ -3,7 +3,9 @@
 use App\Http\Controllers\Admin\AvisoController;
 use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Admin\BlogController;
+use App\Http\Controllers\Admin\BoletinController;
 use App\Http\Controllers\Admin\CategoriaPostController;
+use App\Http\Controllers\Admin\ContactoController;
 use App\Http\Controllers\Admin\CotizacionDesingController;
 use App\Http\Controllers\Admin\CotizacionFotoController;
 use App\Http\Controllers\Admin\DashboardController;
@@ -38,4 +40,6 @@ Route::resource('/testimonios', TestimonioFotoController::class)->names('admin.t
 Route::resource('/sesiones', PortafolioFotoController::class)->names('admin.sesion');
 Route::resource('/paquetes', PaqueteFotoController::class)->names('admin.paquete');
 Route::resource('/cotizaciones/foto', CotizacionFotoController::class)->names('admin.foto');
+Route::resource('/contacto', ContactoController::class)->names('admin.contacto');
+Route::resource('/boletin', BoletinController::class)->names('admin.boletin');
 

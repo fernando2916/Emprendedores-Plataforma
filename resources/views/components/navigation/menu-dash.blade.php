@@ -18,7 +18,7 @@
 @endcan
   <li @click="showMenu = false" class="hover:bg-slate-400 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all">
     <a wire:navigate 
-    {{-- href="{{ route("blog.index") }}"  --}}
+    href="{{ route("blog.index") }}" 
     class="flex items-center gap-3 p-3 text-xl">
       <i class="fa-solid fa-book"></i>
       Blog
@@ -96,7 +96,7 @@
   <form method='post' action="{{ route('logout') }}">
     <li class="hover:bg-slate-400 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all" @click="showMenu = false">
       @csrf
-      <button type='submit' class="flex items-center gap-3 p-3 text-lg">
+      <button type='submit' class="flex items-center gap-3 p-3 text-lg cursor-pointer">
         <i class="fa-solid fa-right-from-bracket"></i>
         Salir
       </button>
@@ -162,7 +162,7 @@
   </li>
   <li class="hover:bg-slate-400 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all" @click="showMenu = false">
     <a wire:navigate 
-    {{-- href="{{ route("contacto.index") }}" --}}
+    href="{{ route("contacto.index") }}"
      class="flex items-center gap-3 p-3 text-lg">
       <i class="fa-solid fa-envelopes-bulk"></i>
       Contacto
@@ -209,15 +209,5 @@
 
       Política de medio ambiente
     </a>
-  </li>
-</ul>
-<ul class="p-2">
-  <li class="hover:bg-slate-400 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all" @click="showMenu = false">
-    <a wire:navigate href="{{ route('home') }}" class="text-sm text-a-100 font-semibold">
-      Emprendedores Creativos &copy;
-    </a>
-    <span class="text-sm font-semibold">
-      {{ now()->year }} Todos los derechos reservados.
-    </span>
   </li>
 </ul>

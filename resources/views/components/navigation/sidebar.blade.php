@@ -52,7 +52,7 @@
     @endauth
   </div>
   <button type="button" data-drawer-hide="drawer-navigation" aria-controls="drawer-navigation"
-    class=" bg-btn-200 hover:bg-btn-400  rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center dark:hover:bg-btn-600 dark:hover:text-white cursor-pointer">
+    class=" bg-btn-200 hover:bg-btn-400 dark:bg-btn-400 rounded-lg text-sm w-8 h-8 absolute top-2.5 end-2.5 inline-flex items-center justify-center dark:hover:bg-btn-600 dark:hover:text-white cursor-pointer">
     <i class="fa-solid fa-xmark text-lg px-1.5"></i>
     <span class="sr-only">Close menu</span>
   </button>
@@ -75,7 +75,7 @@
     </span>
   </li>
 </ul>
-  <div class="py-4 overflow-y-auto">
+  {{-- <div class="py-4 overflow-y-auto">
     <ul class="space-y-2 font-medium p-4">
       <li>
         <a href="#"
@@ -201,5 +201,5 @@
         </a>
       </li>
     </ul>
-  </div>
+  </div> --}}
 </div>

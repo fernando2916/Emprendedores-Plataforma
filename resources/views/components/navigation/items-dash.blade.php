@@ -41,6 +41,30 @@
       </a>
     </li>
     @endcan
+    @can('contacto index')
+
+    <li>
+      <a href="{{ route('admin.contacto.index') }}" wire:navigate
+        class="flex items-center p-2 rounded-lg dark:text-white hover:bg-light-200 dark:hover:bg-nav-700 group">
+        <i class="fa-solid fa-envelope"></i>
+        <span class="ms-3">
+          Contacto
+        </span>
+      </a>
+    </li>
+    @endcan
+    @can('boletin index')
+
+    <li>
+      <a href="{{ route('admin.boletin.index') }}" wire:navigate
+        class="flex items-center p-2 rounded-lg dark:text-white hover:bg-light-200 dark:hover:bg-nav-700 group">
+        <i class="fa-solid fa-envelope-open"></i>
+        <span class="ms-3">
+          Boletin
+        </span>
+      </a>
+    </li>
+    @endcan
 
     @can('ver promo')
 

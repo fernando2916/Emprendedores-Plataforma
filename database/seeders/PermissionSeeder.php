@@ -92,7 +92,10 @@ class PermissionSeeder extends Seeder
             "testimonio foto index",
             "testimonio foto create",
             "testimonio foto edit",
-            "testimonio foto delete",                                  
+            "testimonio foto delete",
+            
+            "contacto index",
+            "boletin index",         
                                  
             "categoria curso index",
             "categoria curso create",

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ContactoController;
 use App\Http\Controllers\DiseñoController;
 use App\Http\Controllers\FotoController;
 use App\Http\Controllers\HomeController;
@@ -15,7 +16,7 @@ Route::get('/fotografia', [FotoController::class, 'index'])->name('fotografia.in
 // Route::get('/diseño-y-desarrollo-web', [DiseñoWebController::class, 'index'])->name('desarrollo.index');
 // Route::get('/impresión', [ImpresionController::class, 'index'])->name('impresion.index');
 // Route::get('/asesorias', [AsesoriasController::class, 'index'])->name('asesorias.index');
-// Route::get('/contacto', [ContactoController::class, 'index'])->name('contacto.index');
+Route::get('/contacto', [ContactoController::class, 'index'])->name('contacto.index');
 
 // // Soporte
 // Route::get('/soporte', [BlogController::class, 'index'])->name('soporte.index');

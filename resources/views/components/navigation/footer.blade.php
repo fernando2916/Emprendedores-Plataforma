@@ -9,7 +9,7 @@
               <h3 class="text-sm font-semibold mb-4 uppercase text-link-100">Menu</h3>
               <ul class="space-y-2 text-sm">
                 <li><a wire:navigate 
-                  href="{{ route("home") }}" class="hover:text-link-100">Blog</a></li>
+                  href="{{ route("blog.index") }}" class="hover:text-link-100">Blog</a></li>
                 <li><a wire:navigate 
                   href="{{ route("home") }}" class="hover:text-link-100">Tienda</a></li>
                 <li><a wire:navigate 
@@ -22,7 +22,7 @@
               <h3 class="text-sm font-semibold mb-4 uppercase text-link-100">Soporte</h3>
               <ul class="space-y-2 text-sm">
                 <li><a wire:navigate 
-                  href="{{ route("home") }}" class="hover:text-link-100">Contacto</a></li>
+                  href="{{ route("contacto.index") }}" class="hover:text-link-100">Contacto</a></li>
                 <li><a wire:navigate 
                   href="{{ route("home") }}" class="hover:text-link-100">Envíos</a></li>
                 <li><a wire:navigate 
@@ -67,20 +67,7 @@
           Nos importa mucho tu privacidad, por lo tanto solo enviamos 5
           correos por mes.
         </p>
-        <form class="mt-4">
-          <label htmlFor="correo" // name="correo electronico" class="text-link-100 font-semibold text-md">
-            Correo Electrónico
-          </label>
-          <div class="md:flex gap-2">
-            <input id="correo" required type="email" placeholder="Ingresa tu Correo Electrónico"
-              class="bg-transparent border-2 placeholder:text-black placeholder:font-semibold dark:placeholder:font-semibold dark:placeholder:text-gray-400 border-link-100 p-2 focus:shadow-md focus:shadow-link-200 rounded-md mt-3 md:mt-2 outline-none w-full md:w-[70%]" />
-            <button
-              class="bg-btn-200 hover:bg-btn-400 text-white dark:bg-btn-400 dark:hover:bg-btn-600 transition-all flex gap-1 items-center p-2 rounded-md mt-3 md:mt-2 text-md font-medium justify-center w-full md:w-[30%]">
-              <i class="fa-solid fa-envelope"></i>
-              Suscríbete
-            </button>
-          </div>
-        </form>
+        @livewire('boletin')
       </div>
     </div>
     <div class="mt-8 border-t border-gray-200 pt-8 md:flex md:items-center md:justify-between">
