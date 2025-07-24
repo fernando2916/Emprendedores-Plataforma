@@ -19,7 +19,7 @@ class AdminUserSeeder extends Seeder
             'nombre_completo' => 'Fernando Flores',
             'username' => 'fer-2916',
             'email' => 'admin@example.com',
-            'password' => bcrypt('Blanca_0812'), // Cambia 'password' por una contraseña segura
+            'password' => bcrypt('@Stefy_2405'), // Cambia 'password' por una contraseña segura
             'is_verified' => 'Verificado', // Marcar como verificado
             'verification_id' => Str::uuid(),
         ]);

@@ -186,7 +186,7 @@
   </li>
   <li class="hover:bg-slate-400 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all" @click="showMenu = false">
     <a wire:navigate 
-    {{-- href="{{ route("vacantes.index") }}" --}}
+    href="{{ route("vacantes.index") }}"
      class="flex items-center gap-3 p-3 text-lg">
       <i class="fa-solid fa-briefcase"></i>
       Vacantes

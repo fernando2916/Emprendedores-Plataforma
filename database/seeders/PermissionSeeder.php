@@ -94,8 +94,14 @@ class PermissionSeeder extends Seeder
             "testimonio foto edit",
             "testimonio foto delete",
             
+            "ver empresa",
             "contacto index",
-            "boletin index",         
+            "boletin index", 
+            
+            "vacante index", 
+            "vacante create", 
+            "vacante edit", 
+            "vacante delete",             
                                  
             "categoria curso index",
             "categoria curso create",

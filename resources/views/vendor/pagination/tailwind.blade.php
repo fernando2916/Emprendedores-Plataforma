@@ -25,10 +25,10 @@
         <div class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
             <div>
                 <p class="text-sm text-gray-200 leading-5 dark:text-gray-400">
-                    {!! __('Lista') !!}
+                    {!! __('Mostrando') !!}
                     @if ($paginator->firstItem())
                         <span class="font-medium">{{ $paginator->firstItem() }}</span>
-                        {!! __('de') !!}
+                        {!! __('al') !!}
                         <span class="font-medium">{{ $paginator->lastItem() }}</span>
                     @else
                         {{ $paginator->count() }}
