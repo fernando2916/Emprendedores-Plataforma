@@ -101,7 +101,15 @@ class PermissionSeeder extends Seeder
             "vacante index", 
             "vacante create", 
             "vacante edit", 
-            "vacante delete",             
+            "vacante delete",
+            
+            
+            "ver glosario",
+            "glosario index", 
+            "glosario create", 
+            "glosario edit", 
+            "glosario delete",
+
                                  
             "categoria curso index",
             "categoria curso create",

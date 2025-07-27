@@ -52,7 +52,7 @@
               <td class="px-4 py-3">{{ $vacante->requisitos }}</td>
               <td class="px-4 py-3 flex items-center justify-end">
                 <div class="flex items-center gap-2">
-                   <a href="{{ route('admin.candidatos.index', $vacante) }}" wire:navigate>
+                   <a href="{{ route('candidatos.index', $vacante) }}" wire:navigate>
                     <button
                       class="px-3 py-2 bg-btn-200 hover:bg-btn-400 dark:bg-btn-400 dark:hover:bg-btn-600 transition-colors duration-150 rounded-md cursor-pointer flex items-center gap-2">
                       {{ $vacante->candidatos->count() }}

@@ -109,6 +109,21 @@
 
     </div>
     @endcan
+    @can('ver glosario')
+    <div>
+      <p class="text-gray-400 ml-2">Recursos</p>
+      @can('glosario index')
+      
+      <li>
+        <a href="{{ route('admin.glosario.index') }}" wire:navigate
+        class="flex items-center w-full p-2 transition duration-75 rounded-lg  gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
+        <i class="fa-brands fa-glide-g"></i>
+        Glosario
+      </a>
+    </li>
+    @endcan
+  </div>
+    @endcan
 
     @can('ver blog')
 

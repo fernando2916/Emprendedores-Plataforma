@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\ContactoController;
 use App\Http\Controllers\Admin\CotizacionDesingController;
 use App\Http\Controllers\Admin\CotizacionFotoController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\GlosarioController;
 use App\Http\Controllers\Admin\OpDesingController;
 use App\Http\Controllers\Admin\PaqueteFotoController;
 use App\Http\Controllers\Admin\PermisionController;
@@ -45,5 +46,6 @@ Route::resource('/cotizaciones/foto', CotizacionFotoController::class)->names('a
 Route::resource('/contacto', ContactoController::class)->names('admin.contacto');
 Route::resource('/boletin', BoletinController::class)->names('admin.boletin');
 Route::resource('/vacantes', VacanteController::class)->names('admin.vacante');
-Route::resource('/candidatos/{vacante}', CandidatosController::class)->names('admin.candidatos');
+Route::get('/candidatos/{vacante}', [CandidatosController::class, 'index'])->name('candidatos.index');
+Route::resource('/glosario', GlosarioController::class)->names('admin.glosario');
 

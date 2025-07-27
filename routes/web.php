@@ -4,6 +4,7 @@ use App\Http\Controllers\BlogController;
 use App\Http\Controllers\ContactoController;
 use App\Http\Controllers\DiseñoController;
 use App\Http\Controllers\FotoController;
+use App\Http\Controllers\GlosarioController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\VacantesController;
 use App\Livewire\ComentarioPost;
@@ -53,6 +54,6 @@ Route::post('/vacantes/{vacante:id}', [VacantesController::class, 'store'])->nam
 // Route::get('/privacidad', [AvisoController::class, 'index'])->name('aviso.index');
 // Route::get('/privacidad/resumen', [AvisoController::class, 'resumen'])->name('resumen.index');
 // Route::get('/terminos-y-condiciones', [TerminosController::class, 'index'])->name('terminos.index');
-// Route::get('/glosario', [GlosarioController::class, 'index'])->name('glosario.index');
+Route::get('/glosario', [GlosarioController::class, 'index'])->name('glosario.index');
 // Route::get('/responsabilidad-social', [FrecuentesController::class, 'index'])->name('social.index');
 // Route::get('/politica-ambiental', [FrecuentesController::class, 'index'])->name('ambiental.index');

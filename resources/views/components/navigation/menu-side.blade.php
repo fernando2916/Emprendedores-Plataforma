@@ -200,7 +200,7 @@
   >
     <a
       wire:navigate 
-      {{-- href="{{ route("glosario.index") }}" --}}
+      href="{{ route("glosario.index") }}"
       class="flex items-center gap-3 p-3 text-lg"
     >
     <i class="fa-brands fa-glide-g"></i>
