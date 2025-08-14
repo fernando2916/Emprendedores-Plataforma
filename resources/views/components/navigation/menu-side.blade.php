@@ -186,7 +186,7 @@
   >
     <a
       wire:navigate 
-      {{-- href="{{ route("contacto.index") }}" --}}
+      href="{{ route("recursos.index") }}"
       class="flex items-center gap-3 p-3 text-lg"
     >
     <i class="fa-solid fa-download"></i>

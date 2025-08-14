@@ -122,6 +122,16 @@
       </a>
     </li>
     @endcan
+      @can('recurso index')
+      
+      <li>
+        <a href="{{ route('admin.recursos.index') }}" wire:navigate
+        class="flex items-center w-full p-2 transition duration-75 rounded-lg  gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
+        <i class="fa-solid fa-download"></i>
+    Recursos
+      </a>
+    </li>
+    @endcan
   </div>
     @endcan
 

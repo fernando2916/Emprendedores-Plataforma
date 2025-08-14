@@ -17,6 +17,7 @@ use App\Http\Controllers\Admin\PermisionController;
 use App\Http\Controllers\Admin\PlansDesingController;
 use App\Http\Controllers\Admin\PortafolioFotoController;
 use App\Http\Controllers\Admin\ProyectController;
+use App\Http\Controllers\Admin\RecursoController;
 use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\TestimonioFotoController;
 use App\Http\Controllers\Admin\UsersController;
@@ -48,4 +49,5 @@ Route::resource('/boletin', BoletinController::class)->names('admin.boletin');
 Route::resource('/vacantes', VacanteController::class)->names('admin.vacante');
 Route::get('/candidatos/{vacante}', [CandidatosController::class, 'index'])->name('candidatos.index');
 Route::resource('/glosario', GlosarioController::class)->names('admin.glosario');
+Route::resource('/recursos', RecursoController::class)->names('admin.recursos');
 

@@ -109,6 +109,12 @@ class PermissionSeeder extends Seeder
             "glosario create", 
             "glosario edit", 
             "glosario delete",
+            
+            "ver recursos",
+            "recurso index", 
+            "recurso create", 
+            "recurso edit", 
+            "recurso delete",
 
                                  
             "categoria curso index",

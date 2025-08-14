@@ -6,6 +6,7 @@ use App\Http\Controllers\DiseñoController;
 use App\Http\Controllers\FotoController;
 use App\Http\Controllers\GlosarioController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\RecursoController;
 use App\Http\Controllers\VacantesController;
 use App\Livewire\ComentarioPost;
 use Illuminate\Support\Facades\Route;
@@ -45,7 +46,8 @@ Route::get('/contacto', [ContactoController::class, 'index'])->name('contacto.in
 // // Cursos
 // Route::get('/cursos', [CursosController::class, 'index'])->name('cursos.index');
 // Route::get('/envios', [EnviosController::class, 'index'])->name('envios.index');
-// Route::get('/recursos', [RecursosController::class, 'index'])->name('recursos.index');
+Route::get('/recursos', [RecursoController::class, 'index'])->name('recursos.index');
+Route::get('/recursos/{id}/descargar', [RecursoController::class, 'download'])->name('recursos.download');
 Route::get('/vacantes', [VacantesController::class, 'index'])->name('vacantes.index');
 Route::get('/vacantes/{vacante:identificador}', [VacantesController::class, 'show'])->name('vacante.show');
 Route::post('/vacantes/{vacante:id}', [VacantesController::class, 'store'])->name('vacante.store');
