@@ -26,14 +26,6 @@
   </li>
   <li @click="showMenu = false" class="hover:bg-slate-400 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all">
     <a wire:navigate 
-    {{-- href="{{ route("tienda.index") }}"  --}}
-    class="flex items-center gap-3 p-3 text-xl">
-      <i class="fa-solid fa-shop"></i>
-      Tienda
-    </a>
-  </li>
-  <li @click="showMenu = false" class="hover:bg-slate-400 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all">
-    <a wire:navigate 
     {{-- href="{{ route("cursos.index") }}"  --}}
     class="flex items-center gap-3 p-3 text-xl">
       <i class="fa-solid fa-video"></i>
@@ -60,14 +52,7 @@
       Mi aprendizaje
     </a>
   </li>
-  <li class="hover:bg-slate-400 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all" @click="showMenu = false">
-    <a wire:navigate 
-    {{-- href="{{ route("compras.index") }}"  --}}
-    class="flex items-center gap-3 p-3 text-lg">
-      <i class="fa-solid fa-bag-shopping"></i>
-      Mis compras
-    </a>
-  </li>
+
   <li class="hover:bg-slate-400 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all" @click="showMenu = false">
     <a wire:navigate 
     {{-- href="{{ route("deseos.index") }}"  --}}
@@ -133,14 +118,6 @@
   </li>
   <li class="hover:bg-slate-400 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all" @click="showMenu = false">
     <a wire:navigate 
-    {{-- href="{{ route("impresion.index") }}" --}}
-     class="flex items-center gap-3 p-3 text-lg">
-      <i class="fa-solid fa-print"></i>
-      Impresión
-    </a>
-  </li>
-  <li class="hover:bg-slate-400 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all" @click="showMenu = false">
-    <a wire:navigate 
     {{-- href="{{ route("asesorias.index") }}" --}}
      class="flex items-center gap-3 p-3 text-lg">
       <i class="fa-solid fa-chalkboard-user"></i>
@@ -192,22 +169,5 @@
       Vacantes
     </a>
   </li>
-  <li class="hover:bg-slate-400 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all" @click="showMenu = false">
-    <a wire:navigate 
-    {{-- href="{{ route("social.index") }}" --}}
-     class="flex items-center gap-3 p-3 text-lg">
-      <i class="fa-solid fa-newspaper"></i>
-      Responsabilidad Social
-    </a>
-  </li>
-  <li class="hover:bg-slate-400 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all" @click="showMenu = false">
-    <a wire:navigate 
-    {{-- href="{{ route("ambiental.index") }}" --}}
-     class="flex items-center gap-3 p-3 text-lg">
-
-      <i class="fa-solid fa-earth-americas"></i>
-
-      Política de medio ambiente
-    </a>
-  </li>
+  
 </ul>

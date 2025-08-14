@@ -53,22 +53,6 @@
         </a>
       </div>
       <div class="swiper-slide shadow-2xl h-72 shadow-link-500 p-4 border-double border-2 border-link-500 rounded-lg">
-        <a href="{{ route('diseno.index') }}">
-        <div class="flex place-content-center">
-          <div class="h-16 w-16 bg-btn-600 rounded-full">
-            <span class="flex justify-center items-center text-4xl py-4 text-cyan-400 h-full w-full object-cover">
-              <i class="fa-solid fa-print"></i>
-            </span>
-          </div>
-        </div>
-        <h2 class="flex justify-center text-xl font-medium py-4">
-         Impresión
-        </h2>
-        <p class="flex text-left items-center text-lg justify-center">
-         Serigrafía, Sublimación, Corte de vinil, etc. Tenemos amplio conocimiento en procesos de impresión.
-        </a>
-      </div>
-      <div class="swiper-slide shadow-2xl h-72 shadow-link-500 p-4 border-double border-2 border-link-500 rounded-lg">
        <a href="{{ route('diseno.index') }}">
         <div class="flex place-content-center">
           <div class="h-16 w-16 bg-btn-600 rounded-full">

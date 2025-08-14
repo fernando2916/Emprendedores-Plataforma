@@ -11,8 +11,6 @@
                 <li><a wire:navigate 
                   href="{{ route("blog.index") }}" class="hover:text-link-100">Blog</a></li>
                 <li><a wire:navigate 
-                  href="{{ route("home") }}" class="hover:text-link-100">Tienda</a></li>
-                <li><a wire:navigate 
                   href="{{ route("home") }}" class="hover:text-link-100">Cursos</a></li>
               </ul>
             </div>
@@ -23,8 +21,6 @@
               <ul class="space-y-2 text-sm">
                 <li><a wire:navigate 
                   href="{{ route("contacto.index") }}" class="hover:text-link-100">Contacto</a></li>
-                <li><a wire:navigate 
-                  href="{{ route("home") }}" class="hover:text-link-100">Envíos</a></li>
                 <li><a wire:navigate 
                   href="{{ route("home") }}"" class="hover:text-link-100">Preguntas Frecuentes</a></li>
               </ul>

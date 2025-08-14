@@ -38,23 +38,12 @@
       </a>
       <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm dark:text-white hover:bg-light-200 focus:outline-hidden focus:bg-gray-100 text-slate-200 dark:hover:bg-nav-700" 
       wire:navigate href="{{ route('home') }}">
-        <i class="fa-solid fa-print"></i>
-        Impresión
-      </a>
-      <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm dark:text-white hover:bg-light-200 focus:outline-hidden focus:bg-gray-100 text-slate-200 dark:hover:bg-nav-700" 
-      wire:navigate href="{{ route('home') }}">
         <i class="fa-solid fa-chalkboard-user"></i>
         Asesorias
       </a>
     </div>
   </div>
 
-   <div class="flex items center gap-2">
-    <a href="/tienda" class="">
-      <i class="fa-solid fa-shop"></i>
-      Tienda
-    </a>
-  </div>
   <div class="flex items center gap-2">
     <a wire:navigate href="{{ route('blog.index') }}" class="">
       <i class="fa-solid fa-book"></i>
@@ -105,16 +94,6 @@
         wire:navigate href="{{ route('vacantes.index') }}">
           <i class="fa-solid fa-briefcase"></i>
           Vacantes
-        </a>
-        <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm dark:text-white hover:bg-light-200 focus:outline-hidden focus:bg-gray-100 text-slate-200 dark:hover:bg-nav-700" 
-        wire:navigate href="{{ route('home') }}">
-          <i class="fa-solid fa-newspaper"></i>
-          Responsabilidad Social
-        </a>
-        <a class="flex items-center gap-x-3.5 py-2 px-3 rounded-lg text-sm dark:text-white hover:bg-light-200 focus:outline-hidden focus:bg-gray-100 text-slate-200 dark:hover:bg-nav-700" 
-        wire:navigate href="{{ route('home') }}">
-          <i class="fa-solid fa-earth-americas"></i>
-          Política Ambiental
         </a>
     </div>
   </div>

@@ -32,20 +32,6 @@
     >
       <a
         wire:navigate 
-        {{-- href="{{ route("tienda.index") }}" --}}
-        class="flex items-center gap-3 p-3 text-lg"
-      >
-      <i class="fa-solid fa-cart-shopping"></i>
-      Tienda
-        
-      </a>
-    </li>
-    <li
-      class="hover:bg-light-200 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all"
-      @click="showMenu = false"
-    >
-      <a
-        wire:navigate 
         {{-- href="{{ route("cursos.index") }}" --}}
         class="flex items-center gap-3 p-3 text-lg"
       >
@@ -103,20 +89,7 @@
         
       </a>
     </li>
-    <li
-      class="hover:bg-light-200 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all"
-      @click="showMenu = false"
-    >
-      <a
-        wire:navigate 
-        {{-- href="{{ route("impresion.index") }}" --}}
-        class="flex items-center gap-3 p-3 text-lg"
-      >
-      <i class="fa-solid fa-print"></i>
-      Impresión
-        
-      </a>
-    </li>
+
     <li
       class="hover:bg-light-200 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all"
       @click="showMenu = false"
@@ -205,32 +178,6 @@
     >
     <i class="fa-brands fa-glide-g"></i>
     Glosario Gráfico
-      
-    </a>
-  <li
-    class="hover:bg-light-200 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all"
-    @click="showMenu = false"
-  >
-    <a
-      wire:navigate 
-      {{-- href="{{ route("social.index") }}" --}}
-      class="flex items-center gap-3 p-3 text-lg"
-    >
-    <i class="fa-solid fa-newspaper"></i>
-    Responsabilidad Social
-      
-    </a>
-  <li
-    class="hover:bg-light-200 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all"
-    @click="showMenu = false"
-  >
-    <a
-      wire:navigate 
-      {{-- href="{{ route("ambiental.index") }}" --}}
-      class="flex items-center gap-3 p-3 text-lg"
-    >
-    <i class="fa-solid fa-earth-americas"></i>
-    Politica Ambiental
       
     </a>
   </li>
