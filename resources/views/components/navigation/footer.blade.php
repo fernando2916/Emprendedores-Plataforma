@@ -11,6 +11,8 @@
                 <li><a wire:navigate 
                   href="{{ route("blog.index") }}" class="hover:text-link-100">Blog</a></li>
                 <li><a wire:navigate 
+                  href="{{ route("tienda.index") }}" class="hover:text-link-100">Tienda</a></li>
+                <li><a wire:navigate 
                   href="{{ route("home") }}" class="hover:text-link-100">Cursos</a></li>
               </ul>
             </div>
@@ -83,9 +85,6 @@
         <a href="https://www.youtube.com/@emprendedorescreativos2018" class="hover:text-link-100" target="_blank"
           rel="noopener noreferrer">
           <i class="fa-brands fa-youtube"></i>
-        </a>
-        <a href="https://t.me/+8q0-Zd0_u3kzYWU5" class="hover:text-link-100" target="_blank" rel="noopener noreferrer">
-          <i class="fa-brands fa-telegram"></i>
         </a>
         <a href="https://www.pinterest.com.mx/emprendedorescreativos2019/" class="hover:text-link-100" target="_blank"
           rel="noopener noreferrer">

@@ -37,6 +37,7 @@ class VacanteController extends Controller
             'puesto' => 'required|string',
             'modalidad' => 'required|string',
             'horario' => 'required',
+            'empresa' => 'required',
             'descripcion' => 'required',
             'salario' => 'required',
             'postulacion' => 'required|date_format:Y-m-d',
@@ -44,10 +45,11 @@ class VacanteController extends Controller
         ], [
             'puesto' => 'El puesto es requerido.',
             'modalidad' => 'La modalidad es requerida.',
-            'horario' => 'El horario es requerido',
+            'horario' => 'El horario es requerido.',
+            'empresa' => 'La empresa es requerida.',
             'descripcion' => 'La descripción es requerida.',
             'salario' => 'El salario es requerido.',
-            'postulacion' => 'La postulación es requerida',
+            'postulacion' => 'La postulación es requerida.',
             'requisitos' => 'Los requisitos son requeridos.',
         ]);
 
@@ -55,6 +57,7 @@ class VacanteController extends Controller
             'puesto' => $data['puesto'],
             'modalidad' => $data['modalidad'],
             'horario' => $data['horario'],
+            'empresa' => $data['empresa'],
             'descripcion' => $data['descripcion'],
             'salario' => $data['salario'],
             'postulacion' => $data['postulacion'],
@@ -78,7 +81,7 @@ class VacanteController extends Controller
      */
     public function show(Candidato $candidatos)
     {
-        return view('admin.vacantes.candidatos.show', $candidatos);
+        return view('admin.vacantes.candidatos.index', $candidatos);
     }
 
     /**
@@ -98,6 +101,7 @@ class VacanteController extends Controller
             'puesto' => 'required|string',
             'modalidad' => 'required|string',
             'horario' => 'required',
+            'empresa' => 'required',
             'descripcion' => 'required',
             'salario' => 'required',
             'postulacion' => 'required',
@@ -106,6 +110,7 @@ class VacanteController extends Controller
             'puesto' => 'El puesto es requerido.',
             'modalidad' => 'La modalidad es requerida.',
             'horario' => 'El horario es requerido',
+            'empresa' => 'La empresa es requerida.',
             'descripcion' => 'La descripción es requerida.',
             'salario' => 'El salario es requerido.',
             'postulacion' => 'La postulación es requerida',

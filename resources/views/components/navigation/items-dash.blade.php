@@ -134,6 +134,95 @@
     @endcan
   </div>
     @endcan
+    @can('ver tienda')
+      <div>
+      <p class="text-gray-400 ml-2">Productos</p>
+      @can('producto index')
+
+      <li>
+        <a href="{{ route('admin.producto.index') }}" wire:navigate
+          class="flex items-center w-full p-2 transition duration-75 rounded-lg  gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
+          <i class="fa-solid fa-store"></i>
+          Productos
+        </a>
+      </li>
+      @endcan
+      @can('categoria producto index')
+
+      <li>
+        <a href="{{ route('admin.categorias.index') }}" wire:navigate
+          class="flex items-center w-full p-2 transition duration-75 rounded-lg  gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
+          <i class="fa-solid fa-tag"></i>
+          Categorias Curso
+        </a>
+      </li>
+      @endcan
+      @can('subCategoria producto index')
+      <li>
+        <a href="{{ route('admin.subcategorias.index') }}" wire:navigate
+          class="flex items-center w-full p-2 transition duration-75 rounded-lg gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
+          <i class="fa-solid fa-tags"></i>
+          Sub Categorias Curso
+        </a>
+      </li>
+      @endcan
+      @can('especialidad producto index')
+      <li>
+        <a href="{{ route('admin.especialidad.index') }}" wire:navigate
+          class="flex items-center w-full p-2 transition duration-75 rounded-lg gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
+          <i class="fa-solid fa-school"></i>
+          Especialidad Curso
+        </a>
+      </li>
+      @endcan
+
+    </div>
+    @endcan
+
+    @can('ver curso')
+      <div>
+      <p class="text-gray-400 ml-2">Cursos</p>
+      @can('curso index')
+
+      <li>
+        <a href="{{ route('admin.cursos.index') }}" wire:navigate
+          class="flex items-center w-full p-2 transition duration-75 rounded-lg  gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
+          <i class="fa-solid fa-book"></i>
+          Cursos
+        </a>
+      </li>
+      @endcan
+      @can('categoria curso index')
+
+      <li>
+        <a href="{{ route('admin.categorias.index') }}" wire:navigate
+          class="flex items-center w-full p-2 transition duration-75 rounded-lg  gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
+          <i class="fa-solid fa-tag"></i>
+          Categorias Curso
+        </a>
+      </li>
+      @endcan
+      @can('subCategoria curso index')
+      <li>
+        <a href="{{ route('admin.subcategorias.index') }}" wire:navigate
+          class="flex items-center w-full p-2 transition duration-75 rounded-lg gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
+          <i class="fa-solid fa-tags"></i>
+          Sub Categorias Curso
+        </a>
+      </li>
+      @endcan
+      @can('especialidad curso index')
+      <li>
+        <a href="{{ route('admin.especialidad.index') }}" wire:navigate
+          class="flex items-center w-full p-2 transition duration-75 rounded-lg gap-3 group hover:bg-light-300 dark:hover:bg-nav-700">
+          <i class="fa-solid fa-school"></i>
+          Especialidad Curso
+        </a>
+      </li>
+      @endcan
+
+    </div>
+    @endcan
 
     @can('ver blog')
 

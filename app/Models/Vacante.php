@@ -10,6 +10,7 @@ class Vacante extends Model
         'puesto',
         'modalidad',
         'horario',
+        'empresa',
         'salario',
         'identificador',
         'postulacion',

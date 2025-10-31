@@ -45,7 +45,7 @@ Contacto |
               <div class="flex flex-col lg:flex-row gap-2 items-center">
                 <div class="flex items-center gap-2">
                   <i class="fa-brands fa-whatsapp"></i>
-                  <h3 class="">Teléfono / WhatsApp:</h3>
+                  <h3 class="">WhatsApp:</h3>
                 </div>
                 <p class="text-link-300 dark:text-link-100"> 55-27-97-08-10</p>
               </div>
@@ -55,8 +55,7 @@ Contacto |
                   <h3 class="">Ubicación:</h3>
                 </div>
                 <p class="text-link-300 dark:text-link-100 text-sm text-justify">
-                  C. Nícolas Bravo 107, Bo. San Miguel Ótlica, 54964, Tultepec
-                  edo de Méx.
+                 Queretaro, México.
                 </p>
               </div>
               <div class="flex flex-col lg:flex-row gap-2 items-center">
@@ -101,12 +100,7 @@ Contacto |
                     <div class="bg-btn-200 hover:bg-btn-400 text-white dark:bg-btn-400 dark:hover:bg-btn-600 rounded-full p-5 box-content transition-colors duration-150">
                       <i class="fa-brands fa-x-twitter text-3xl"></i>
                     </div>
-                  </a>
-                  <a href="https://t.me/+8q0-Zd0_u3kzYWU5" target="_blank">
-                    <div class="bg-btn-200 hover:bg-btn-400 text-white dark:bg-btn-400 dark:hover:bg-btn-600 rounded-full p-5 box-content transition-colors duration-150">
-                      <i class="fa-brands fa-telegram text-3xl"></i>
-                    </div>
-                  </a>
+                  </a>                 
                   <a
                     href="https://www.instagram.com/creadores_creat"
                     target="_blank"

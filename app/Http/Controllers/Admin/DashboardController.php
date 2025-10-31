@@ -3,6 +3,9 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Blog;
+use App\Models\Producto;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controllers\HasMiddleware;
 use Illuminate\Routing\Controllers\Middleware;
@@ -18,6 +21,13 @@ class DashboardController extends Controller implements HasMiddleware
     
     public function index()
     {
-        return view('admin.Dashboard');
+        $totalusuarios = User::count();
+        $totalpublicaciones = Blog::count();
+        $totalproductos = Producto::count();
+        return view('admin.Dashboard', compact(
+            'totalusuarios',
+            'totalpublicaciones',
+            'totalproductos'
+        ));
     }
 }

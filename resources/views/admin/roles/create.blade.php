@@ -32,7 +32,25 @@
 
                 <div class="my-5">
                     <h3 class="mb-4font-semibold text-gray-900 dark:text-white">Permisos</h3>
-                    <ul class="text-sm font-medium rounded-lg grid grid-cols-3 gap-3">
+                    <div class="mb-4 flex items-center gap-2">
+                        <input id="selectAll" type="checkbox"
+                            class="w-4 h-4 text-blue-500 bg-gray-700 border-gray-600 rounded">
+                        <label for="selectAll" class="text-sm font-semibold">Seleccionar todos</label>
+                    </div>
+                    <div class="grid grid-cols-3 gap-4">
+        @foreach ($permissions as $permission)
+            <label class="flex items-center space-x-2">
+                <input 
+                    type="checkbox" 
+                    name="permissions[]" 
+                    value="{{ $permission->id }}" @checked(in_array($permission->id, old('permissions',
+                                [])))"
+                    class="permiso w-4 h-4 text-blue-500 bg-gray-700 border-gray-600 rounded">
+                <span class="text-sm">{{ $permission->name }}</span>
+            </label>
+        @endforeach
+    </div>
+                    {{-- <ul class="text-sm font-medium rounded-lg grid grid-cols-3 gap-3">
                         @foreach ( $permissions as $permission)
                         <li class="w-full rounded-t-lg ">
                             <div class="flex items-center ps-3">
@@ -49,7 +67,7 @@
                         </li>
                         @endforeach
 
-                    </ul>
+                    </ul> --}}
                 </div>
 
                 <button type="submit"
@@ -60,3 +78,12 @@
     </div>
 </div>
 @endsection
+
+@push('scripts')
+    <script>
+    document.getElementById('selectAll').addEventListener('change', function(e) {
+        const checkboxes = document.querySelectorAll('.permiso');
+        checkboxes.forEach(ch => ch.checked = e.target.checked);
+    });
+</script>
+@endpush

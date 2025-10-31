@@ -20,7 +20,7 @@
             class="text-sm font-medium mb-2 after:ml-0.5 after:text-red-500 after:content-['*']">Nombre
             Completo </label>
           <input id="nombre_completo" name="nombre_completo"
-            value="{{ old('nombre_completo', $user->nombre_completo) }}" type="text" placeholder="Blanca Gonzales"
+            value="{{ old('nombre_completo', $user->nombre_completo) }}" type="text" placeholder="Stephany Rodriguez"
             class="disabled:bg-nav-900 disabled:border-nav-900 border-link-100 focus:shadow-link-200 w-full rounded-md border-2 bg-transparent p-2 outline-none focus:shadow-md placeholder:text-gray-500 mt-2 @error('nombre_completo')
                          dark:border-alerts-500
                          @enderror">
@@ -34,7 +34,7 @@
             class="text-sm font-medium mb-2 after:ml-0.5 after:text-red-500 after:content-['*']">Nombre
             de usuario </label>
           <input id="username" name="username" value="{{ old('username', $user->username) }}" type="text"
-            placeholder="Blanca-Gonzales" class="disabled:bg-nav-900 disabled:border-nav-900 border-link-100 focus:shadow-link-200 w-full rounded-md border-2 bg-transparent p-2 outline-none focus:shadow-md placeholder:text-gray-500 mt-2 @error('username')
+            placeholder="Stephany-Rodriguez" class="disabled:bg-nav-900 disabled:border-nav-900 border-link-100 focus:shadow-link-200 w-full rounded-md border-2 bg-transparent p-2 outline-none focus:shadow-md placeholder:text-gray-500 mt-2 @error('username')
                          dark:border-alerts-500
                          @enderror">
           @error('username')
@@ -46,7 +46,7 @@
           <label for="email" class="text-sm font-medium mb-2 after:ml-0.5 after:text-red-500 after:content-['*']">Correo
             electrónico </label>
           <input id="email" name="email" value="{{ old('email', $user->email) }}" type="text"
-            placeholder="blanca@coore.com" class="disabled:bg-nav-900 disabled:border-nav-900 border-link-100 focus:shadow-link-200 w-full rounded-md border-2 bg-transparent p-2 outline-none focus:shadow-md placeholder:text-gray-500 mt-2 @error('email')
+            placeholder="stephany@correo.com" class="disabled:bg-nav-900 disabled:border-nav-900 border-link-100 focus:shadow-link-200 w-full rounded-md border-2 bg-transparent p-2 outline-none focus:shadow-md placeholder:text-gray-500 mt-2 @error('email')
                          dark:border-alerts-500
                          @enderror">
           @error('email')

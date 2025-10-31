@@ -52,6 +52,18 @@
           <p class="text-sm font-semibold text-alerts-500">{{ $message }}</p>
           @enderror
         </div>
+        <div>
+          <label for="empresa"
+            class="font-medium mb-2 after:ml-0.5 after:text-red-500 after:content-['*']">Empresa</label>
+          <input id="empresa" name="empresa" value="{{ old('empresa', $vacante->empresa) }}" type="text" placeholder="Empresa"
+            class="dark:disabled:bg-nav-900 dark:disabled:border-nav-900 disabled:bg-light-300 disabled:border-light-300 border-link-100 w-full rounded-md border-2 bg-transparent p-2 outline-none focus:shadow-md placeholder:text-slate-300 dark:placeholder:text-slate-400 mt-2 @error('empresa')
+          dark:border-alerts-500
+          @enderror">
+          @error('empresa')
+
+          <p class="text-sm font-semibold text-alerts-500">{{ $message }}</p>
+          @enderror
+        </div>
 
         <div>
           <p class="font-medium mb-2 after:ml-0.5 after:text-red-500 after:content-['*']">Descripcion del puesto</p>

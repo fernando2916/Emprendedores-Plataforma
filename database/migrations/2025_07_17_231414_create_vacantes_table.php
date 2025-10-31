@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('puesto');
             $table->string('modalidad');
+            $table->string('empresa');
             $table->string('horario');
             $table->string('salario');
             $table->string('identificador')->unique();

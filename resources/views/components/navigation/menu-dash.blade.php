@@ -26,7 +26,15 @@
   </li>
   <li @click="showMenu = false" class="hover:bg-slate-400 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all">
     <a wire:navigate 
-    {{-- href="{{ route("cursos.index") }}"  --}}
+    href="{{ route("tienda.index") }}" 
+    class="flex items-center gap-3 p-3 text-xl">
+      <i class="fa-solid fa-shopping-cart"></i>
+      Tienda
+    </a>
+  </li>
+  <li @click="showMenu = false" class="hover:bg-slate-400 dark:hover:bg-nav-700 pl-3 rounded-lg transition-all">
+    <a wire:navigate 
+    href="{{ route("cursos.index") }}" 
     class="flex items-center gap-3 p-3 text-xl">
       <i class="fa-solid fa-video"></i>
       Cursos

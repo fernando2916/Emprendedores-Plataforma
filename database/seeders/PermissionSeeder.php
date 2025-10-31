@@ -117,15 +117,34 @@ class PermissionSeeder extends Seeder
             "recurso delete",
 
                                  
+            "ver curso",
+            "curso index",
+            "curso create",
+            "curso edit",
+            "curso delete",
+           
             "categoria curso index",
             "categoria curso create",
             "categoria curso edit",
             "categoria curso delete",
+           
+            "subCategoria curso index",
+            "subCategoria curso create",
+            "subCategoria curso edit",
+            "subCategoria curso delete",
             
-            "categoria producto index",
-            "categoria producto create",
-            "categoria producto edit",
-            "categoria producto delete",
+            "especialidad curso index",
+            "especialidad curso create",
+            "especialidad curso edit",
+            "especialidad curso delete",
+
+            "ver tienda",
+
+            "producto index",
+            "producto create",
+            "producto edit",
+            "producto show",
+            
         ];
 
         foreach ($permissions as $key => $value) {

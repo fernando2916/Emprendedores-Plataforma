@@ -5,20 +5,24 @@ use App\Http\Controllers\Admin\BannerController;
 use App\Http\Controllers\Admin\BlogController;
 use App\Http\Controllers\Admin\BoletinController;
 use App\Http\Controllers\Admin\CandidatosController;
+use App\Http\Controllers\Admin\CategoriaCursoController;
 use App\Http\Controllers\Admin\CategoriaPostController;
 use App\Http\Controllers\Admin\ContactoController;
 use App\Http\Controllers\Admin\CotizacionDesingController;
 use App\Http\Controllers\Admin\CotizacionFotoController;
 use App\Http\Controllers\Admin\DashboardController;
+use App\Http\Controllers\Admin\EspecialidadController;
 use App\Http\Controllers\Admin\GlosarioController;
 use App\Http\Controllers\Admin\OpDesingController;
 use App\Http\Controllers\Admin\PaqueteFotoController;
 use App\Http\Controllers\Admin\PermisionController;
 use App\Http\Controllers\Admin\PlansDesingController;
 use App\Http\Controllers\Admin\PortafolioFotoController;
+use App\Http\Controllers\Admin\ProductoController;
 use App\Http\Controllers\Admin\ProyectController;
 use App\Http\Controllers\Admin\RecursoController;
 use App\Http\Controllers\Admin\RoleController;
+use App\Http\Controllers\Admin\SubCategoriaCursoController;
 use App\Http\Controllers\Admin\TestimonioFotoController;
 use App\Http\Controllers\Admin\UsersController;
 use App\Http\Controllers\Admin\VacanteController;
@@ -50,4 +54,12 @@ Route::resource('/vacantes', VacanteController::class)->names('admin.vacante');
 Route::get('/candidatos/{vacante}', [CandidatosController::class, 'index'])->name('candidatos.index');
 Route::resource('/glosario', GlosarioController::class)->names('admin.glosario');
 Route::resource('/recursos', RecursoController::class)->names('admin.recursos');
+
+
+Route::resource('/cursos', RecursoController::class)->names('admin.cursos');
+Route::resource('/categorias', CategoriaCursoController::class)->names('admin.categorias');
+Route::resource('/subcategorias', SubCategoriaCursoController::class)->names('admin.subcategorias');
+Route::resource('/especialidad', EspecialidadController::class)->names('admin.especialidad');
+
+Route::resource('/tienda', ProductoController::class)->names('admin.producto');
 

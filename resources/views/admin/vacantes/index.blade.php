@@ -29,6 +29,7 @@
               <th scope="col" class="px-4 py-3">Puesto</th>
               <th scope="col" class="px-4 py-3">Modalidad</th>
               <th scope="col" class="px-4 py-3">Horario</th>
+              <th scope="col" class="px-4 py-3">Empresa</th>
               <th scope="col" class="px-4 py-3">Salario</th>
               <th scope="col" class="px-4 py-3">Identificador</th>
               <th scope="col" class="px-4 py-3">Postulación</th>
@@ -45,6 +46,7 @@
               <td class="px-4 py-3">{{ $vacante->puesto }}</td>
               <td class="px-4 py-3">{{ $vacante->modalidad }}</td>
               <td class="px-4 py-3">{{ $vacante->horario }}</td>
+              <td class="px-4 py-3">{{ $vacante->empresa }}</td>
               <td class="px-4 py-3">{{ $vacante->salario }}</td>
               <td class="px-4 py-3">{{ $vacante->identificador }}</td>
               <td class="px-4 py-3">{{ $vacante->postulacion->format('d/m/Y') }}</td>

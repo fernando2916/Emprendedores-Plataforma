@@ -17,12 +17,10 @@ Vacantes |
   </div>
 </header>
 <div class="py-12">
-  <div class="max-w-7xl mx-auto">
-     <h3 class="font-bold text-xl md:text-3xl container mx-auto mb-12">
-              Nuestras Vacantes Disponibles
-      </h3>
+  <div class="max-w-7xl mx-auto">     
       <div class="bg-light-300 dark:bg-cont-100 rounded-lg p-6 shadow-sm divide-y divide-slate-300">
-        @forelse ($vacantes as $vacante)
+        @livewire('vacantes')
+        {{-- @forelse ($vacantes as $vacante)
            <div class="md:flex md:justify-between md:items-center py-5">
             <div class="md:flex-1">
               <a wire:navigate class="text-3xl font-extrabold " href="{{ route('vacante.show', $vacante->identificador) }}">
@@ -64,7 +62,7 @@ Vacantes |
                       </button>
                     </a>
                   </div>
-        @endforelse
+        @endforelse --}}
          <div class="mt-4 m-5">
          {{ $vacantes->links('vendor.pagination.tailwind') }}
       </div>        

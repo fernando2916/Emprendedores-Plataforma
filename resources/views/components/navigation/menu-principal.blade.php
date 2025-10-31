@@ -51,6 +51,12 @@
     </a>
   </div>
   <div class="flex items center gap-2">
+    <a wire:navigate href="{{ route('tienda.index') }}" class="">
+      <i class="fa-solid fa-shopping-cart"></i>
+      Tienda
+    </a>
+  </div>
+  <div class="flex items center gap-2">
     <a href="/cursos" class="">
       <i class="fa-solid fa-video"></i>
       Cursos
